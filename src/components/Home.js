@@ -19,7 +19,7 @@ class Home extends Component{
                 <div class="row">
                     <div className = "col-sm-1"></div>
                     <div class="col-sm-1 text-left pl-2">
-                        <a href="index.html">
+                        <a href="/">
                             <h2 className = "text-center" >
                                    JDSB
                             </h2>
