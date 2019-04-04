@@ -48,15 +48,9 @@ class Home extends Component{
                                         <a href="#">
                                             Upcoming Events
                                         </a>
-                                        <ul class="multi-column">
-                                            <li>
-                                                <ul>
-                                                    <li>
-                                                        <span class="multi-column__title">
-                                                            COMING SOON
-                                                        </span>
-                                                    </li>
-                                                </ul>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#">COMING SOON</a>
                                             </li>
                                         </ul>
                                     </li>
