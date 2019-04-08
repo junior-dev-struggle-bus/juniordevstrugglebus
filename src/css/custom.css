@@ -1,4 +1,8 @@
 /***************************
 Add your custom styles below
 ****************************/
-
+.resource-card {
+    padding:"0 2em 0 2em";
+    background-color:'black' !important;
+    color:blue;
+  }

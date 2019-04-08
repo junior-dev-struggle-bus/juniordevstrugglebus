@@ -131,7 +131,7 @@ h6,
 .h5,
 .h6 {
   font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
-  color: #343434;
+  /* color: #343434; */
   font-weight: 600;
   font-variant-ligatures: common-ligatures;
   margin-top: 0;
@@ -3248,23 +3248,23 @@ h6,
 }
 h1,
 .h1 {
-  margin-bottom: 0.40625em;
+  /* margin-bottom: 0.40625em; */
 }
 h2,
 .h2 {
-  margin-bottom: 0.57777777777778em;
+  /* margin-bottom: 0.57777777777778em; */
 }
 h3,
 .h3 {
-  margin-bottom: 0.8125em;
+  /* margin-bottom: 0.8125em; */
 }
 h4,
 .h4 {
-  margin-bottom: 1.1304347826087em;
+  /* margin-bottom: 1.1304347826087em; */
 }
 h5,
 .h5 {
-  margin-bottom: 1.625em;
+  /* margin-bottom: 1.625em; */
 }
 h6,
 .h6 {
