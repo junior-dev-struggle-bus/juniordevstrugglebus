@@ -1,9 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 export default function Header(props){
-    console.log(props)
     const Link  = props.link
-    console.log(props)
     return(
         <nav className="transition--fade transition--active" style = {{padding:'.5em'}}>
                 <div className="row">
