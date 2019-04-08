@@ -9,7 +9,7 @@ class Resources extends Component{
         categories:[],
     }
     async componentDidMount(){
-        console.log(process.env.REACT_APP_CUSTOM_ENV_VAR)
+        console.log(process.env.CUSTOM_ENV_VAR)
         const resp = await axios.get('https://sheets.googleapis.com/v4/spreadsheets/1KJCyQz0yrwdaH7hR_Yc61txUHECPT1MW1TDhnCHFoM4/values/responses?key=key')
         const data = await resp.data
         const values = await data.values
