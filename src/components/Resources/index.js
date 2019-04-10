@@ -9,15 +9,13 @@ class Resources extends Component{
         categories:[],
     }
     async componentDidMount(){
-        console.log(process.env.CUSTOM_ENV_VAR)
-        const resp = await axios.get('https://sheets.googleapis.com/v4/spreadsheets/1KJCyQz0yrwdaH7hR_Yc61txUHECPT1MW1TDhnCHFoM4/values/responses?key=key')
+        const resp = await axios.get('https://natespilman.tech/jdsb/resources/')
         const data = await resp.data
-        const values = await data.values
-        const headers = await values[0].map(json => json.toLowerCase().replace(/ /g,'').replace(/[{()}]/g, ''))
-        values.shift()
+        const headers = await data[0].map(json => json.toLowerCase().replace(/ /g,'').replace(/[{()}]/g, ''))
+        data.shift()
 
         const resources = []
-        await values.forEach(
+        await data.forEach(
             line => {
                 const obj = {};
                 for(let i = 0; i < line.length; i++){
