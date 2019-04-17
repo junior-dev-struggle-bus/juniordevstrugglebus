@@ -5,7 +5,7 @@ Log issues, make pull requests. Let's build something that benefits the communit
 
 Happy Hacking :-) 
 
-#create-react-app boiler plate info - how it install once you clone the repo
+# create-react-app boiler plate info - how it install once you clone the repo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
