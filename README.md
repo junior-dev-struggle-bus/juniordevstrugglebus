@@ -1,8 +1,5 @@
 # Welcome to the Junior Dev Struggle Bus Website
-
-
-
-
+## This is a Struggle Bus community driven project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
