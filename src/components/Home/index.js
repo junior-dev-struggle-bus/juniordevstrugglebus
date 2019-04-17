@@ -33,6 +33,19 @@ class Home extends Component{
                             <img src={meetupLogo} className="img-fluid"/>
                         </div>
                     </a>
+                    <a target="_blank" href = "https://github.com/nspilman/juniordevstrugglebus">
+                    
+                        <div className = "col-sm-8">
+                            <span>
+                                <h4>
+                                    Contribute to the Community
+                                </h4>
+                            </span>
+                        </div>
+                        <div className = "col-sm-4">
+                            <img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" className="img-fluid" style={{height:'75px',backgroundColor:'white', borderRadius:'1em'}}/>
+                        </div>
+                    </a>
                     </div>
                 </div>
             </div>
