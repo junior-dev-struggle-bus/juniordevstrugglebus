@@ -1,0 +1,17 @@
+.navbar-brand h2 {
+  font-size: 2.5rem;
+  position: relative;
+  bottom: 15px;
+}
+
+button.navbar-toggle,
+button.navbar-toggle:hover,
+button.navbar-toggle:active {
+  border: none;
+}
+
+.nav-button-icon {
+  position: relative;
+  bottom: 15px;
+  color: #121212;
+}
