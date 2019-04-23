@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
+
+//  Images
 import homeImage from "../../img/juniorDevHome.jpg"
 import aboutImage from "../../img/aboutSection.jpg"
 import meetupLogo from "../../img/meetupLogo.svg"
+
+//  Buttons
+import GitHubButton from 'react-github-btn'
 
 class Home extends Component{
     render(){
@@ -25,12 +30,12 @@ class Home extends Component{
                         <div className = "col-sm-8">
                             <span>
                                 <h4>
-                                    Check the Meetup Group
+                                    Meetup with us!
                                 </h4>
                             </span>
                         </div>
                         <div className = "col-sm-4">
-                            <img src={meetupLogo} className="img-fluid"/>
+                            <img style={{maxWidth: '150px'}} src={meetupLogo} className="img-fluid"/>
                         </div>
                     </a>
                     <a target="_blank" href = "https://github.com/nspilman/juniordevstrugglebus">
@@ -38,13 +43,16 @@ class Home extends Component{
                         <div className = "col-sm-8">
                             <span>
                                 <h4>
-                                    Contribute to the Community
+                                    Contribute!
                                 </h4>
                             </span>
                         </div>
-                        <div className = "col-sm-4">
-                            <img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" className="img-fluid" style={{height:'75px',backgroundColor:'white', borderRadius:'1em'}}/>
-                        </div>
+                        <GitHubButton href="https://github.com/nspilman/juniordevstrugglebus/fork"
+                            data-size="large"
+                            data-show-count="true"
+                            aria-label="Fork nspilman/juniordevstrugglebus on GitHub">
+                            Fork
+                        </GitHubButton>
                     </a>
                     </div>
                 </div>
