@@ -61,7 +61,7 @@ class Resources extends Component{
             <div className = "container">
             {categories.map(category =>{ 
                 const resources = this.state.resources.filter(resource => 
-                    resource['language/topic'] == category)
+                    resource['language/topic'] === category)
                     return(
                         <div style = {
                             {

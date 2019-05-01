@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import styled from 'styled-components'
 
+import './Resource.css'
+
 export default function Resource(props){
   const {title,mediacategory, link} = props.resource
     // Create a Title component that'll render an <h1> tag with some styles
