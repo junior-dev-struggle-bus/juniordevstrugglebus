@@ -4,6 +4,8 @@ import styled from 'styled-components'
 
 import Resource from "./Resource"
 
+import { SkeletonLine } from '../UI/Skeleton'
+
 const Addresource = styled.div`
 position:fixed;
 top:92vh;
@@ -34,28 +36,46 @@ class Resources extends Component{
         resources:[],
         categories:[],
     }
-    async componentDidMount(){
-        const resp = await axios.get('https://natespilman.tech/jdsb/resources/')
-        const data = await resp.data
-        const headers = await data[0].map(json => json.toLowerCase().replace(/ /g,'').replace(/[{()}]/g, ''))
-        data.shift()
-
-        const resources = []
-        await data.forEach(
-            line => {
-                const obj = {};
-                for(let i = 0; i < line.length; i++){
-                    obj[headers[i]] = line[i]
-                }
-                resources.push(obj)
-            }      
-        )
-        const categories = [...new Set(resources.map(resource => resource['language/topic']))]
-        this.setState({resources})
-        this.setState({categories})
+    componentDidMount() {
+        console.log('yes')
+        var resourceData = async () => {
+            console.log('sup')
+            const resp = await axios.get('https://natespilman.tech/jdsb/resources/')
+            const data = await resp.data
+            const headers = await data[0].map(json => json.toLowerCase().replace(/ /g,'').replace(/[{()}]/g, ''))
+            data.shift()
+    
+            const resources = []
+            await data.forEach(
+                line => {
+                    const obj = {};
+                    for(let i = 0; i < line.length; i++){
+                        obj[headers[i]] = line[i]
+                    }
+                    resources.push(obj)
+                }      
+            )
+            const categories = [...new Set(resources.map(resource => resource['language/topic']))]
+            this.setState({resources})
+            this.setState({categories})
+        }
+        resourceData()
     }
     
     render(){
+        if (this.state.resources.length == 0) {
+            console.log('hoasdas')
+            return (
+                <div style={{color: 'black'}} className = "container">
+                        <Resource skeleton={true} />
+                        <Resource skeleton={true}/>
+                        <Resource skeleton={true}/>
+                        <Resource skeleton={true}/>
+                        <Resource skeleton={true}/>
+                </div>
+            );
+        }
+        
         const {categories} = this.state
         return(
             <div className = "container">
