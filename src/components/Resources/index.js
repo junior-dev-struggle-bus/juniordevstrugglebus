@@ -12,6 +12,7 @@ top:92vh;
 left:80vw;
 min-height:10vh;
 background-color:black;
+box-shadow: 0px 0px 5px 3px #ff5959;
 border-radius:25px 25px 0 0;
 padding:1em;
 transition:1s;
@@ -63,7 +64,7 @@ class Resources extends Component{
     }
     
     render(){
-        if (this.state.resources.length == 0) {
+        if (this.state.resources.length === 0) {
             console.log('hoasdas')
             return (
                 <div style={{color: 'black'}} className = "container">
