@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
 import styled from 'styled-components'
 
-export default function Resource(props){
-  const {title,mediacategory, link} = props.resource
-    // Create a Title component that'll render an <h1> tag with some styles
+import './Resource.css'
 
+import { SkeletonLine } from '../UI/Skeleton'
+
+export default function Resource(props) {
+    const { title, mediacategory, link } =
+        props.skeleton === true ?
+            '' : props.resource
+
+// Create a Title component that'll render an <h1> tag with some styles
 const Title = styled.h3`
     paddingBotton:0;
     marginBottom:0;
@@ -30,7 +36,29 @@ transition:.3s;
 
 `
 
-
+// This can also be referenced to how a 'Resource' is rendered
+if (props.skeleton === true) {
+    return (
+        <div className = "py-5 text-left resource-card"> 
+            {/* <h2>{title}</h2> */}
+            <Wrapper style={{padding: '4em', margin: '15px', marginTop: '50px'}}>
+                <Title>
+                    <SkeletonLine/>
+                </Title>
+                <div>
+                    <TextAttributes>
+                        <SkeletonLine/>
+                    </TextAttributes>
+                    <TextAttributes>
+                        <SkeletonLine/>
+                    </TextAttributes>
+                </div>
+                    
+            </Wrapper>
+        </div>
+    )
+}
+    
 // Use Title and Wrapper like any other React component – except they're styled!
 
   return (
