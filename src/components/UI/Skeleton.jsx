@@ -14,7 +14,7 @@ const SSkeletonPulse = styled.div`
   display: inline-block;
   height: 1em;
   width: 100%;
-  background: linear-gradient(-90deg, #F0F0F0 0%, #ff5959 50%, #F0F0F0 100%);
+  background: linear-gradient(-90deg, #F0F0F0 0%, black 50%, #F0F0F0 100%);
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
   @keyframes pulse {

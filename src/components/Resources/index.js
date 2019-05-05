@@ -62,9 +62,10 @@ class Resources extends Component{
     }
     
     render(){
-        // if (this.state.resources.length === 0) {
+        if (this.state.resources.length === 0) {
             return (
                 <div style={{color: 'black'}} className = "container">
+                <h1>Loading Resources</h1>
                         <Resource skeleton={true} />
                         <Resource skeleton={true}/>
                         <Resource skeleton={true}/>
@@ -72,43 +73,43 @@ class Resources extends Component{
                         <Resource skeleton={true}/>
                 </div>
             );
-        // }
+        }
         
-        // const {categories} = this.state
-        // return(
-        //     <div className = "container">
-        //     {categories.map(category =>{ 
-        //         const resources = this.state.resources.filter(resource => 
-        //             resource['language/topic'] === category)
-        //             return(
-        //                 <div style = {
-        //                     {
-        //                         padding:'1em',
-        //                     }
-        //                 }>
-        //                     <h2 className = "text-left">
-        //                         {category}
-        //                     </h2>
-        //                     <div>
-        //                         {
-        //                         resources.map(resource =>
-        //                             <Resource resource={resource}/>)
-        //                         }
-        //                     </div>
-        //                 </div>
-        //                 )
-        //             }
-        //         )
-        //     }
-        //     <Addresource>
-        //        <h5>
-        //            <WebLink href="https://forms.gle/CVMbXaZjVk1tnwjDA" target="_blank"> 
-        //                 Add Educational Material
-        //            </WebLink>
-        //         </h5>
-        //     </Addresource>
-        //     </div>
-        // )
+        const {categories} = this.state
+        return(
+            <div className = "container">
+            {categories.map(category =>{ 
+                const resources = this.state.resources.filter(resource => 
+                    resource['language/topic'] === category)
+                    return(
+                        <div style = {
+                            {
+                                padding:'1em',
+                            }
+                        }>
+                            <h2 className = "text-left">
+                                {category}
+                            </h2>
+                            <div>
+                                {
+                                resources.map(resource =>
+                                    <Resource resource={resource}/>)
+                                }
+                            </div>
+                        </div>
+                        )
+                    }
+                )
+            }
+            <Addresource>
+               <h5>
+                   <WebLink href="https://forms.gle/CVMbXaZjVk1tnwjDA" target="_blank"> 
+                        Add Educational Material
+                   </WebLink>
+                </h5>
+            </Addresource>
+            </div>
+        )
     }
 }
 
