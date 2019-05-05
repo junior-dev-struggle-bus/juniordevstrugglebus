@@ -38,9 +38,7 @@ class Resources extends Component{
         categories:[],
     }
     componentDidMount() {
-        console.log('yes')
         var resourceData = async () => {
-            console.log('sup')
             const resp = await axios.get('https://natespilman.tech/jdsb/resources/')
             const data = await resp.data
             const headers = await data[0].map(json => json.toLowerCase().replace(/ /g,'').replace(/[{()}]/g, ''))
@@ -65,7 +63,6 @@ class Resources extends Component{
     
     render(){
         if (this.state.resources.length === 0) {
-            console.log('hoasdas')
             return (
                 <div style={{color: 'black'}} className = "container">
                         <Resource skeleton={true} />

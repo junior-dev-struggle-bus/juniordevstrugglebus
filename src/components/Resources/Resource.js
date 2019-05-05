@@ -40,7 +40,8 @@ transition:.3s;
 if (props.skeleton === true) {
     return (
         <div className = "py-5 text-left resource-card"> 
-            {/* <h2>{title}</h2> */}
+        
+            <h2>Loading Resource</h2> 
             <Wrapper style={{padding: '4em', margin: '15px', marginTop: '50px'}}>
                 <Title>
                     <SkeletonLine/>
