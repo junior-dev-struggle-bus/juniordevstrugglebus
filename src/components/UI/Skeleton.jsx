@@ -28,8 +28,8 @@ const SSkeletonPulse = styled.div`
 `;
 
 const SSkeletonLine = styled(SSkeletonPulse)`
-  width: 5.5em;
-  height: 5.5em;
+  width: 100%;
+  height: 1em;
   border-radius: 5px;
 
   &::before {
