@@ -15,6 +15,7 @@ import './css/custom.css';
 import Home from './components/Home/';
 import Header from './components/Header/Header';
 import Resources from './components/Resources/';
+import Events from './components/Events/';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
           <Header hi="hello" link={Link} />
           <Route path="/" exact component={Home} />
           <Route path="/resources" exact component={Resources} />
+          <Route path="/events" exact component={Events} />
         </Router>
       </div>
     );

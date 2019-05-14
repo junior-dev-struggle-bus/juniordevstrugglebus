@@ -29,15 +29,7 @@ export default function Header(props) {
               <Link to="/resources">Resources</Link>
             </li>
             <li>
-              <a className="dropdown-toggle" data-toggle="dropdown" href="#">
-                Upcoming Events
-                <span className="caret" />
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a href="#">COMING SOON!</a>
-                </li>
-              </ul>
+              <Link to="/events">Upcoming Events</Link>
             </li>
           </ul>
         </div>
