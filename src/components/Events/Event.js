@@ -6,7 +6,7 @@ import meetupLogo from "../../img/meetupLogo.svg"
 import { SkeletonLine } from '../UI/Skeleton'
 
 export default function Resource(props) {
-    const { title, mediacategory, link, date } =
+    const { title, link, date, location } =
         props.skeleton === true ?
             '' : props.resource
 
@@ -68,10 +68,13 @@ if (props.skeleton === true) {
   <Title>
    { date } - { title }
   </Title>
-        <div style={{color:'white',}}>
+  <TextAttributes>
+      Location: {location}
+</TextAttributes>
+        <div style={{color:'white',paddingBottom:"1em;"}}>
         <TextAttributes>
             <div style={{display:'flex'}}>
-                <a target="_blank" href = "https://www.meetup.com/The-Junior-Dev-Struggle-Bus/">
+                <a target="_blank" href = {link}>
                         <div className = "col-sm-8">
                             <span>
                                 <h4 style={{color:'white'}}>
