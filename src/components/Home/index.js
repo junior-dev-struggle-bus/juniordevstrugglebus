@@ -74,7 +74,7 @@ class Home extends Component{
                               About the Community
                             </h3>
                             <p>
-                            The Junior Dev Struggle Bus is a little tribe of aspiring programmers supporting each other in trying to land that coveted first dev job. The road is long and the struggle is hard when breaking into the tech industry. What we can't accomplish alone, we can accomplish together. Come with your woes and laptops, sip on some joe, get advice on planning your job hunt, make new friends, hangout, pair program, show off your projects, etc. We are laid back and friendly and were here to foster an open minded and caring environment thats focused on helping each other, so please: no douchebags, high school popularity contests, and superiority complexes.
+                            The Junior Dev Struggle Bus is a little tribe of aspiring programmers supporting each other in trying to land that coveted first dev job. The road is long and the struggle is hard when breaking into the tech industry. What we can't accomplish alone, we can accomplish together. Come with your woes and laptops, sip on some joe, get advice on planning your job hunt, make new friends, hangout, pair program, show off your projects, etc. We are laid back and friendly and were here to foster an open minded and caring environment thats focused on helping each other - so please, let's keep this collaborative!
                             </p>
                             <a className="btn btn--square" href="https://www.meetup.com/The-Junior-Dev-Struggle-Bus/" target="_blank">
                                 <span className="btn__text">
