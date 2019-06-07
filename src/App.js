@@ -16,16 +16,18 @@ import Home from './components/Home/';
 import Header from './components/Header/Header';
 import Resources from './components/Resources/';
 import Events from './components/Events/';
+import Organization from './components/Organization/';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Router>
-          <Header hi="hello" link={Link} />
+          <Header link={Link} />
           <Route path="/" exact component={Home} />
           <Route path="/resources" exact component={Resources} />
           <Route path="/events" exact component={Events} />
+          <Route path="/organization" exact component={Organization} />
         </Router>
       </div>
     );
