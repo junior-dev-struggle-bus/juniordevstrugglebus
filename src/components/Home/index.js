@@ -59,6 +59,7 @@ class Home extends Component {
                   </a>
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/nspilman/juniordevstrugglebus"
                   >
                     <div className="col-sm-8">
