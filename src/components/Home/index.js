@@ -95,7 +95,7 @@ class Home extends Component {
                 height: "100%"
               }}
             >
-              <img alt="image" src={aboutImage} />
+              <img alt="Laptop with code on the screen" src={aboutImage} />
             </div>
           </div>
           <div className="container">
@@ -119,6 +119,7 @@ class Home extends Component {
                   className="btn btn--square"
                   href="https://www.meetup.com/The-Junior-Dev-Struggle-Bus/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <span className="btn__text">Join the Meetup</span>
                 </a>

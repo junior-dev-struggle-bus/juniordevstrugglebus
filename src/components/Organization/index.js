@@ -45,7 +45,7 @@ const Organization = props => {
               height: "100%"
             }}
           >
-            <img alt="image" src={orgImage} />
+            <img alt="Two coders and a laptop" src={orgImage} />
           </div>
         </div>
         <div className="container">

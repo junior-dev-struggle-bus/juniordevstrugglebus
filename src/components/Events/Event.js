@@ -25,13 +25,15 @@ export default function Resource(props) {
     border-radius: 25px;
   `;
 
-  const WebLink = styled.a`
-    color: white;
-    transition: 0.3s;
-    :hover {
-      color: orange;
-    }
-  `;
+  // Commented out since it is currently unused, but may be used in the future
+
+  //   const WebLink = styled.a`
+  //     color: white;
+  //     transition: 0.3s;
+  //     :hover {
+  //       color: orange;
+  //     }
+  //   `;
 
   // This can also be referenced to how a 'Resource' is rendered
   if (props.skeleton === true) {
@@ -63,10 +65,10 @@ export default function Resource(props) {
           {date} - {title}
         </Title>
         <TextAttributes>Location: {location}</TextAttributes>
-        <div style={{ color: "white", paddingBottom: "1em;" }}>
+        <div style={{ color: "white", paddingBottom: "1em" }}>
           <TextAttributes>
             <div style={{ display: "flex" }}>
-              <a target="_blank" ref="noopener noreferrer" href={link}>
+              <a target="_blank" rel="noopener noreferrer" href={link}>
                 <div className="col-sm-8">
                   <span>
                     <h4 style={{ color: "white" }}>Meetup with us!</h4>
