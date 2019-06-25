@@ -50,6 +50,7 @@ class Home extends Component {
                     </div>
                     <div className="col-sm-4">
                       <img
+                        alt="Meetup Logo"
                         style={{ maxWidth: "150px" }}
                         src={meetupLogo}
                         className="img-fluid"
