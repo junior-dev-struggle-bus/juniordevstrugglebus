@@ -25,7 +25,7 @@ export default function Resource(props) {
     border-radius: 25px;
   `;
 
-  // Commented out since it is currently unused, but may be used in the future
+  // Commented out since it is currently unused, but may be used in the future(?)
 
   //   const WebLink = styled.a`
   //     color: white;

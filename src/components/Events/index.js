@@ -69,21 +69,20 @@ class Events extends Component {
     return (
       <div className="container">
         <h1 style={{ color: "black", padding: ".5em" }}>Upcoming Events</h1>
-        {categories.map(category => {
+        {categories.map((category, index) => {
           const resources = this.state.resources.filter(
             resource => resource["language/topic"] === category
           );
           return (
             <div
+              key={index}
               style={{
                 padding: "1em"
               }}
             >
-              <div>
-                {resources.map(resource => (
-                  <Event resource={resource} />
-                ))}
-              </div>
+              {resources.map((resource, index) => (
+                <Event key={index} resource={resource} />
+              ))}
             </div>
           );
         })}
