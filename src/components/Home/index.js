@@ -37,6 +37,10 @@ class Home extends Component {
                 <div className="meetupLink row">
                   <a
                     target="_blank"
+                    // noopener used with _blank target to prevent security risks.
+                    // Forces the new page to open in its own process and prevents access to your pages window.opener property
+                    // noreferrer used for similar reasons.
+                    rel="noopener noreferrer"
                     href="https://www.meetup.com/The-Junior-Dev-Struggle-Bus/"
                   >
                     <div className="col-sm-8">
