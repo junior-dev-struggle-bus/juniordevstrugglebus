@@ -67,15 +67,15 @@ class Home extends Component {
                         <h4>Contribute!</h4>
                       </span>
                     </div>
-                    <GitHubButton
-                      href="https://github.com/nspilman/juniordevstrugglebus/fork"
-                      data-size="large"
-                      data-show-count="true"
-                      aria-label="Fork nspilman/juniordevstrugglebus on GitHub"
-                    >
-                      Fork
-                    </GitHubButton>
                   </a>
+                  <GitHubButton
+                    href="https://github.com/nspilman/juniordevstrugglebus/fork"
+                    data-size="large"
+                    data-show-count="true"
+                    aria-label="Fork nspilman/juniordevstrugglebus on GitHub"
+                  >
+                    Fork
+                  </GitHubButton>
                 </div>
               </div>
             </div>
