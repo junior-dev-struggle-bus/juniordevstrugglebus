@@ -5,7 +5,7 @@ import meetupLogo from "../../img/meetupLogo.svg";
 import { SkeletonLine } from "../UI/Skeleton";
 
 export default function Resource(props) {
-  const { title, link, date, location } =
+  const { name, link, local_date, venue } =
     props.skeleton === true ? "" : props.resource;
 
   // Create a Title component that'll render an <h1> tag with some styles
@@ -62,9 +62,9 @@ export default function Resource(props) {
     <div className="py-5 text-left resource-card">
       <Wrapper>
         <Title>
-          {date} - {title}
+          {local_date} - {name}
         </Title>
-        <TextAttributes>Location: {location}</TextAttributes>
+        <TextAttributes>Location: {venue.name}</TextAttributes>
         <div style={{ color: "white", paddingBottom: "1em" }}>
           <TextAttributes>
             <div style={{ display: "flex" }}>
@@ -86,7 +86,7 @@ export default function Resource(props) {
             </div>
             {/* Sign Up: <WebLink href ={link} target = "_blank">{link}</WebLink> */}
           </TextAttributes>
-          {/* <h2>{title}</h2> */}
+          {/* <h2>{name}</h2> */}
         </div>
       </Wrapper>
     </div>

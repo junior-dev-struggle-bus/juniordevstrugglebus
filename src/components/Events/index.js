@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import Event from "./Event";
+import EventItem from "./EventItem";
 
 // Query to the Meetup api for 5 event results.
 // CORS-Anywhere used for an easy defeat of CORS issues
@@ -12,19 +12,22 @@ function Events() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    axios({
-      url: MEETUP_API,
-      method: "get"
-    })
-      .then(res => {
-        setEvents(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    const getEvents = async () => {
+      const response = await axios(MEETUP_API);
+
+      setEvents(response.data);
+    };
+
+    getEvents();
   }, []);
 
-  return <div />;
+  return (
+    <div className="container">
+      {events.map(event => (
+        <EventItem key={event.id} event={event} />
+      ))}
+    </div>
+  );
 }
 
 export default Events;
