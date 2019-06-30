@@ -8,24 +8,16 @@ import meetupLogo from "../../img/meetupLogo.svg";
 //  Buttons
 import GitHubButton from "react-github-btn";
 
+//  Styles
+import "./Home.css";
+
 class Home extends Component {
   render() {
     return (
       <React.Fragment>
         <section className="imageblock bg--dark">
-          <div className="imageblock__content col-md-6 col-sm-4 pos-left">
-            <div
-              className=""
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                opacity: 1,
-                height: "100%"
-              }}
-            >
-              <img alt="Coders sitting around a table" src={homeImage} />
-            </div>
+          <div className="imgTile imageblock__content col-md-6 col-sm-4 pos-left">
+            <img alt="Coders sitting around a table" src={homeImage} />
           </div>
           <div className="container">
             <div className="row">
@@ -84,19 +76,8 @@ class Home extends Component {
           {/* <!--end of container--> */}
         </section>
         <section className="imageblock about-1 bg--secondary">
-          <div className="imageblock__content col-md-6 col-sm-4 pos-right">
-            <div
-              className=""
-              style={{
-                opacity: 1,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%"
-              }}
-            >
-              <img alt="Laptop with code on the screen" src={aboutImage} />
-            </div>
+          <div className="imgTile imageblock__content col-md-6 col-sm-4 pos-right">
+            <img alt="Laptop with code on the screen" src={aboutImage} />
           </div>
           <div className="container">
             <div className="row">
