@@ -21,8 +21,8 @@ color:white;
 `
 
 const Organization = (props) =>{
-    const bodList = [{name:'Austin Atendido',title:'Chairman of the Board'},{name:'Nate Spilman',title:'Member of the Board'}]
-    const execList = [{name:'Austin Atendido',title:'President'},{name:'Nate Spilman',title:'Vice President'},{name:'Nate Spilman',title:'Treasurer'},{name:'Daniel Kluss',title:'Secretary'}]
+    const bodList = [{name:'Brett Hurst',title:'Chairman of the Board'},{name:'Nate Spilman',title:'Member of the Board'},{name:'Mark Labrador',title:'Member of the Board'},{name:'Joseph Burchetta',title:'Member of the Board'}]
+    const execList = [{name:'Brett Hurst',title:'President'},{name:'Nate Spilman',title:'Vice President'},{name:'Nate Spilman',title:'Treasurer'},{name:'Daniel Kluss',title:'Secretary'}]
     return(
         <div>
            <section className="imageblock about-1 bg--secondary">
