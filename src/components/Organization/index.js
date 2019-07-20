@@ -69,9 +69,7 @@ const Organization = (props) =>{
                  Interested in joining the team? Let us know!
                   </Styledp>
             </Aboutsection>
-            
             {/* <!--end of row--> */}
-      </section>
       <Styledp />
       <Aboutsection id="exec">
         <h3 style={{ color: "white", padding: "0 0 1em 0" }}>
