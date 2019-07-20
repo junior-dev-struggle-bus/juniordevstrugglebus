@@ -20,7 +20,6 @@ const Position = styled.div`
   color: white;
 `;
 
-<<<<<<< HEAD
 const Organization = (props) =>{
     const bodList = [{name:'Brett Hurst',title:'Chairman of the Board'},{name:'Nate Spilman',title:'Member of the Board'},{name:'Mark Labrador',title:'Member of the Board'},{name:'Joseph Burchetta',title:'Member of the Board'}]
     const execList = [{name:'Brett Hurst',title:'President'},{name:'Nate Spilman',title:'Vice President'},{name:'Nate Spilman',title:'Treasurer'},{name:'Daniel Kluss',title:'Secretary'}]
@@ -72,57 +71,6 @@ const Organization = (props) =>{
             </Aboutsection>
             
             {/* <!--end of row--> */}
-=======
-const Organization = props => {
-  const bodList = [
-    { name: "Austin Atendido", title: "Chairman of the Board" },
-    { name: "Nate Spilman", title: "Member of the Board" }
-  ];
-  const execList = [
-    { name: "Austin Atendido", title: "President" },
-    { name: "Nate Spilman", title: "Vice President" },
-    { name: "Nate Spilman", title: "Treasurer" },
-    { name: "Daniel Kluss", title: "Secretary" }
-  ];
-  return (
-    <div>
-      <section className="imageblock about-1 bg--secondary">
-        <div className="imageblock__content col-md-6 col-sm-4 pos-right">
-          <div
-            className=""
-            style={{
-              opacity: 1,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%"
-            }}
-          >
-            <img alt="Two coders and a laptop" src={orgImage} />
-          </div>
-        </div>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-5 col-sm-8 text-left">
-              <h1 style={{ paddingBottom: "1em" }}>
-                About the Junior Dev Struggle Bus
-              </h1>
-              <p>
-                The Junior Dev Struggle Bus is a non-profit organization in
-                filings with the state of Washington. We are in the process of
-                opening a bank account and filing for 501c3 status at the
-                national level. The short and the long of it is, our community
-                intention is to grow developers who then give back to the
-                community. Tech companies are more than happy to donate money
-                toward that mission, which we will then funnel toward
-                instructors, community spaces, etc.
-              </p>
-            </div>
-          </div>
-          {/* <!--end of row--> */}
-        </div>
->>>>>>> d800cc5e8879c3d8b60ee1e43b313fa62a1ff95f
-        {/* <!--end of container--> */}
       </section>
       <Styledp />
       <Aboutsection id="exec">
