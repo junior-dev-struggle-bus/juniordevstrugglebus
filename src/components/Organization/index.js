@@ -71,34 +71,7 @@ const Organization = (props) =>{
             </Aboutsection>
             {/* <!--end of row--> */}
       <Styledp />
-      <Aboutsection id="exec">
-        <h3 style={{ color: "white", padding: "0 0 1em 0" }}>
-          The Executive Team and Board of Directors
-        </h3>
-        <h4 style={{ color: "white", padding: "0 0 1em 0" }}>
-          Board of Directors
-        </h4>
-        {bodList.map(position => {
-          return (
-            <Position>
-              {position.title} - {position.name}
-            </Position>
-          );
-        })}
-
-        <h4 style={{ color: "white", padding: "1em 0 1em 0" }}>
-          Executive Team
-        </h4>
-        {execList.map(position => {
-          return (
-            <Position>
-              {position.title} - {position.name}
-            </Position>
-          );
-        })}
-        <Styledp>Interested in joining the team? Let us know!</Styledp>
-      </Aboutsection>
-
+     
       {/* <!--end of row--> */}
       {/* <!--end of container--> */}
     </div>
