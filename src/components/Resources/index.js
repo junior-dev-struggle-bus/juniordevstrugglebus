@@ -102,13 +102,11 @@ class Resources extends Component {
             </div>
           );
         })}
-        <Addresource>
-          <h5>
-            <WebLink href="https://forms.gle/CVMbXaZjVk1tnwjDA" target="_blank">
-              Add Educational Material
-            </WebLink>
-          </h5>
-        </Addresource>
+        <WebLink href="https://forms.gle/CVMbXaZjVk1tnwjDA" target="_blank">
+          <Addresource>
+            <h5>Add Educational Material</h5>
+          </Addresource>
+        </WebLink>
       </div>
     );
   }
