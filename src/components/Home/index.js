@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import homeImage from "../../img/juniorDevHome.jpg";
 import aboutImage from "../../img/aboutSection.jpg";
 import meetupLogo from "../../img/meetupLogo.svg";
+import slackLogo from "../../img/slackLogo.png";
 
 //  Buttons
 import GitHubButton from "react-github-btn";
@@ -52,7 +53,26 @@ class Home extends Component {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://github.com/nspilman/juniordevstrugglebus"
+                    href="https://juniordevstrugglebus.com/slack"
+                  >
+                    <div className="col-sm-8">
+                      <span>
+                        <h4>Join us on Slack!</h4>
+                      </span>
+                    </div>
+                    <div className="col-sm-4">
+                      <img
+                        alt="Slack Logo"
+                        style={{ maxWidth: "150px", backgroundColor:'white', padding:'.5em', borderRadius:'1em' }}
+                        src={slackLogo}
+                        className="img-fluid"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/junior-dev-struggle-bus/juniordevstrugglebus"
                   >
                     <div className="col-sm-8">
                       <span>
@@ -61,13 +81,14 @@ class Home extends Component {
                     </div>
                   </a>
                   <GitHubButton
-                    href="https://github.com/nspilman/juniordevstrugglebus/fork"
+                    href="https://github.com/junior-dev-struggle-bus/juniordevstrugglebus/fork"
                     data-size="large"
                     data-show-count="true"
-                    aria-label="Fork nspilman/juniordevstrugglebus on GitHub"
+                    aria-label="Fork junior-dev-struggle-bus/juniordevstrugglebus on GitHub"
                   >
                     Fork
                   </GitHubButton>
+                 
                 </div>
               </div>
             </div>
@@ -84,7 +105,7 @@ class Home extends Component {
               <div className="col-md-5 col-sm-8 text-left">
                 <h3>About the Community</h3>
                 <p>
-                  The Junior Dev Struggle Bus is a little tribe of aspiring
+                  The Junior Dev Struggle Bus is a community of aspiring
                   programmers supporting each other in trying to land that
                   coveted first dev job. The road is long and the struggle is
                   hard when breaking into the tech industry. What we can't
