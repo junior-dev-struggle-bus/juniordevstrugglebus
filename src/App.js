@@ -28,6 +28,10 @@ class App extends Component {
             <Route path="/resources" exact component={Resources} />
             <Route path="/events" exact component={Events} />
             <Route path="/organization" exact component={Organization} />
+            <Route path='/slack' component={() => { 
+              window.location.href = 'https://join.slack.com/t/jdsb/shared_invite/enQtNzA0NTY3OTE2ODg3LTE5ZTE5ODI5YmE5YTUzN2UyOWUxZmM1ZDZlNDliZTgxYTg0ODRlMmM3OThkY2JlZDRlNjIzYmJiMjNjNDBjOWQ'; 
+            return null;
+}}/>
             <Route component={NotFound} />
           </Switch>
         </Router>
