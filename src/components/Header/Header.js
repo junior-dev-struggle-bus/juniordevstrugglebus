@@ -32,6 +32,9 @@ export default function Header(props) {
               <Link to="/events">Upcoming Events</Link>
             </li>
             <li>
+              <Link to="/organization">Organization</Link>
+            </li>
+            <li>
               <a href="https://juniordevstruggleblog.com/" target="_blank">Blog</a>
             </li>
           </ul>
