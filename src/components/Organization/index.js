@@ -47,7 +47,7 @@ const Organization = props => {
               height: "100%"
             }}
           >
-            <img alt="image" src={orgImage} />
+            <img style={{padding:"1em"}} alt="image" src="https://secure.meetupstatic.com/photos/event/4/f/a/0/highres_483860384.jpeg" />
           </div>
         </div>
         <div className="container">
@@ -56,16 +56,36 @@ const Organization = props => {
               <h1 style={{ paddingBottom: "1em" }}>
                 About the Junior Dev Struggle Bus
               </h1>
+              <h3>Vision</h3>
               <p>
-                The Junior Dev Struggle Bus is a non-profit organization in
-                filings with the state of Washington. We are in the process of
-                opening a bank account and filing for 501c3 status at the
-                national level. The short and the long of it is, our community
-                intention is to grow developers who then give back to the
-                community. Tech companies are more than happy to donate money
-                toward that mission, which we will then funnel toward
-                instructors, community spaces, etc.
+                A tech community learning, building, and succeeding through
+                helping one another.
               </p>
+              <h3>Mission</h3>
+              <p>
+                We provide an open and supportive community to eliminate
+                barriers to opportunity and enhance the technical confidence of
+                those interested in technology.
+              </p>
+              <h3>Values</h3>
+              <ul>
+                <li>
+                  <b>Collaboration:</b> We are a community of builders making
+                  connections with each other over tech.
+                </li>
+                <li>
+                  <b>Encouragement:</b> Helping to dismantle fear and doubt through
+                  support, praise, or advice to develop self-trust.
+                </li>
+                <li>
+                  <b>Inclusivity:</b> Everyone should not only be welcomed, but
+                  actively encouraged to participate.
+                </li>
+                <li>
+                  <b>Community:</b> we focus on where we can provide value in the
+                  community and take action in those areas.
+                </li>
+              </ul>
             </div>
           </div>
           {/* <!--end of row--> */}
