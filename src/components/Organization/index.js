@@ -25,7 +25,8 @@ const Organization = props => {
     { name: "Brett Hurst", title: "Chairman of the Board" },
     { name: "Nate Spilman", title: "Member of the Board" },
     { name: "Christina Roufosse", title: "Member of the Board" },
-    { name: "Joseph Burchetta", title: "Member of the Board" }
+    { name: "Lizzy Presland", title: "Member of the Board" },
+    { name: "Joseph Burchetta", title: "Member of the Board" },
   ];
   const execList = [
     { name: "Brett Hurst", title: "President" },
