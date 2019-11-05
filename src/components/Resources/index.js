@@ -15,7 +15,7 @@ class Resources extends Component {
         categories: []
     };
     componentDidMount() {
-        var resourceData = async () => {
+        const resourceData = async () => {
             const resp = await axios.get("https://natespilman.tech/jdsb/resources/");
             const data = await resp.data;
             const headers = await data[0].map(json =>

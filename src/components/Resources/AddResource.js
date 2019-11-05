@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import styled from "styled-components";
 
 
@@ -30,13 +31,18 @@ const WebLink = styled.a`
 
 
 export default function AddResource() {
-    const [text, setText] = useState("From the browser!");
+    const [text, setText] = useState("Browser!");
+    useEffect(() => {
+        if (text === "Browser!") {
+            const lambda = async () => {
+                const res = await axios.get(".netlify/functions/resources");
+                setText(res.data);
+            }
+            lambda();
+        }
+    }, [text]);
     return (
-        <WebLink
-            href="https://forms.gle/CVMbXaZjVk1tnwjDA"
-            target="_blank"
-            onClick={() => console.log("test")}
-        >
+        <WebLink href="https://forms.gle/CVMbXaZjVk1tnwjDA" target="_blank">
             <Addresource>
                 <h5>Add Educational Material</h5>
                 {text}

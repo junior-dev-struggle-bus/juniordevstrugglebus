@@ -1,0 +1,5 @@
+[build]
+  functions = "./functions"
+
+[dev]
+  functionsPort = 34567
