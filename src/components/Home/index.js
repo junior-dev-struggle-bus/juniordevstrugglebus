@@ -114,7 +114,7 @@ class Home extends Component {
                   job hunt, make new friends, learn and teach new tech, pair program, show off
                   your projects, etc. We are laid back and friendly and were
                   here to foster an open minded and caring environment thats
-                  focused on helping each other. We value collaboration, community,
+                  focused on helping each other. We value collaboration, encouragement,
                   inclusivity and community, so come hang out!
                 </p>
                 <a
