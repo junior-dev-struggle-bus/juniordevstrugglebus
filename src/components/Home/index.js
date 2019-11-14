@@ -105,17 +105,17 @@ class Home extends Component {
               <div className="col-md-5 col-sm-8 text-left">
                 <h3>About the Community</h3>
                 <p>
-                  The Junior Dev Struggle Bus is a community of aspiring
-                  programmers supporting each other in trying to land that
-                  coveted first dev job. The road is long and the struggle is
-                  hard when breaking into the tech industry. What we can't
-                  accomplish alone, we can accomplish together. Come with your
+                  The Junior Dev Struggle Bus is a tech community learning, 
+                  building, and succeeding through helping one another.
+                  We provide an open and supportive community to eliminate 
+                  barriers to opportunity and enhance the technical confidence 
+                  of those interested in technology. Come with your
                   woes and laptops, sip on some joe, get advice on planning your
-                  job hunt, make new friends, hangout, pair program, show off
+                  job hunt, make new friends, learn and teach new tech, pair program, show off
                   your projects, etc. We are laid back and friendly and were
                   here to foster an open minded and caring environment thats
-                  focused on helping each other - so please, let's keep this
-                  collaborative!
+                  focused on helping each other. We value collaboration, community,
+                  inclusivity and community, so come hang out!
                 </p>
                 <a
                   className="btn btn--square"
