@@ -75,7 +75,7 @@ class Resources extends Component {
                                     </div>
                                 );
                             })}
-                            <AddResource/>
+                            <AddResource {...this.props}/>
                         </div>
                     )}
                 </Route>

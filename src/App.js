@@ -27,7 +27,7 @@ class App extends Component {
                     <Header link={Link} />
                     <Switch>
                         <Route path="/" exact component={Home} />
-                        <Route path="/resources" component={Resources} />} />
+                        <Route path="/resources" component={Resources} />
                         <Route path="/events" exact component={Events} />
                         <Route path="/organization" exact component={Organization} />
                         <Route path="/slack" render={() => {
