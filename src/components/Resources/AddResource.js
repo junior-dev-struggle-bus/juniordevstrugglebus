@@ -49,8 +49,8 @@ export default function AddResource() {
     const [text, setText] = useState("Browser!");
     const netlifyFunction = async () => {
         if (text === "Browser!") {
-            const res = await axios.get(".netlify/functions/resources");
-            setText(res.data);
+            const res = await axios.get(".netlify/functions/getAllResources");
+            console.log(res.data);
         }
     };
     return (
