@@ -16,7 +16,7 @@ class Resources extends Component {
     };
     componentDidMount() {
         const resourceData = async () => {
-            const resp = await axios.get("http://localhost:8888/.netlify/functions/allResources");
+            const resp = await axios.get("/.netlify/functions/allResources");
             const resources = await resp.data.map(resp => resp.data);
 
             const categories = [
