@@ -30,46 +30,72 @@ export default function ResourceForm() {
     };
     return (
         <div className="container">
-            <form style={{ color: "black", textAlign: "center" }}>
+            <form className="resource-form">
                 <h2>Add Resource Form</h2>
                 {text}
-                <label>
-                    Name
-                    <input required value={name} onChange={event => setName(event.target.value)}/>
-                </label>
-                <label>
-                    Email
-                    <input required value={email} onChange={event => setEmail(event.target.value)}/>
-                </label>
-                <label>
-                    Title
-                    <input required value={title} onChange={event => setTitle(event.target.value)}/>
-                </label>
-                <label>
-                    Subject
-                    <input required value={subject} onChange={event => setSubject(event.target.value)}/>
-                </label>
-                <label>
-                    Category
-                    <select required value={category} onChange={event => setCategory(event.target.value)}>
-                        <option>Course</option>
-                        <option>Video</option>
-                        <option>Blog Post</option>
-                        <option>Free Course</option>
-                        <option>Inexpensive Course</option>
-                        <option>Bootcamp</option>
-                        <option>Other</option>
-                    </select>
-                </label>
-                <label>
-                    Link
-                    <input required value={link} onChange={event => setLink(event.target.value)}/>
-                </label>
+                <fieldset>
+                    <label>
+                        Full Name
+                        <input
+                            value={name} type="text" required
+                            placeholder="Enter your full name"
+                            onChange={event => setName(event.target.value)}
+                        />
+                    </label>
+                    <label>
+                        Email Address
+                        <input
+                            value={email} type="email" required
+                            placeholder="Enter your email address"
+                            onChange={event => setEmail(event.target.value)}
+                        />
+                    </label>
+                    <label>
+                        Resource Title
+                        <input
+                            value={title} type="text" required
+                            placeholder="Give the resource a title"
+                            onChange={event => setTitle(event.target.value)}
+                        />
+                    </label>
+                    <label>
+                        Technical Subject / Language
+                        <input
+                            value={subject} type="text" required
+                            placeholder="Identify the resource topic"
+                            onChange={event => setSubject(event.target.value)}
+                        />
+                    </label>
+                    <label>
+                        Media / Platform Category
+                        <select
+                            value={category} required
+                            onChange={event => setCategory(event.target.value)}
+                        >
+                            <option value="">Select a media category</option>
+                            <option value="course">Course</option>
+                            <option value="video">Video</option>
+                            <option value="blog post">Blog Post</option>
+                            <option value="free course">Free Course</option>
+                            <option value="inexpensive course">Inexpensive Course</option>
+                            <option value="bootcamp">Bootcamp</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+                    <label>
+                        Link To Resource
+                        <input
+                            value={link} type="url" required
+                            placeholder="Provide the resource URL"
+                            onChange={event => setLink(event.target.value)}
+                        />
+                    </label>
+                </fieldset>
                 <div className="resource-submit">
                     <Link to="/resources">
                         <button>Back</button>
                     </Link>
-                    <button onClick={netlifyFunction}>Add</button>
+                    <button type="submit" onClick={netlifyFunction}>Add</button>
                     <a href={url} target="_blank" rel="noopener noreferrer">
                         <button onClick={googleForm}>Google</button>
                     </a>

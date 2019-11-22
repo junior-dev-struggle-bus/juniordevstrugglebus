@@ -2,15 +2,58 @@
 
 
 
+.resource-form {
+	text-align: center;
+}
+
+.resource-form h2 {
+	color: black;
+}
+
+.resource-form fieldset {
+	text-align: left;
+	max-width: 40em;
+	width: 90%;
+	margin: 2em auto 1em;
+}
+
+.resource-form label {
+	font-size: 1em;
+	line-height: 1.25em;
+	margin: 0 auto 30px;
+}
+
+.resource-form input, .resource-form select {
+	/* border: 1px solid #cccccc !important; */
+	border-radius: 0px !important;
+	color: #404040 !important;
+	height: 2.5em !important;
+	width: 100%;
+	margin: 0.5em auto 0 !important;
+	padding: 0 1em !important;
+}
+
+/* Meant for marking required fields dynamically, but isn't working */
+.resource-form input::before {
+	content: "*";
+	color: red;
+}
+
+/* Placeholder stylings for input and select fields */
+.resource-form input::placeholder, .resource-form select:invalid {
+	color: #909090 !important;
+	font-style: italic;
+}
+
 .resource-submit {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
 	box-sizing: border-box;;
 	font-weight: bold;
-	height: 2em;
+	height: 2.5em;
 	width: 75%;
-	margin: 0.5em auto 0;
+	margin: 0 auto;
 }
 
 .resource-submit * {
@@ -27,5 +70,6 @@
 	height: 100%;
 	width: 100%;
 }
+
 
 
