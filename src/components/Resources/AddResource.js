@@ -49,9 +49,9 @@ export default function AddResource() {
     const [text, setText] = useState("Browser!");
     const netlifyFunction = async () => {
         if (text === "Browser!") {
-            const res = await axios.get(".netlify/functions/getAllResources");
-            console.log(res.data);
+
         }
+        setText("TODO - Make this link to a new 'add resource' page")
     };
     return (
         <Addresource>

@@ -1,0 +1,13 @@
+type Resource {
+   datetime:String!
+   topic:String!
+   category:String!
+   link:String!
+   title: String!
+   submitter:String!
+   email:String!
+}
+
+type Query {
+   allResource: [Resource!]
+}

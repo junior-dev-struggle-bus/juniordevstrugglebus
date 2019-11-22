@@ -6,7 +6,7 @@ import "./Resource.css";
 import { SkeletonLine } from "../UI/Skeleton";
 
 export default function Resource(props) {
-  const { title, mediacategory, link } =
+  const { title, category, link } =
     props.skeleton === true ? "" : props.resource;
 
   // Create a Title component that'll render an <h1> tag with some styles
@@ -62,7 +62,7 @@ export default function Resource(props) {
       <Wrapper>
         <Title>{title}</Title>
         <div style={{ color: "white" }}>
-          <TextAttributes>Category: {mediacategory}</TextAttributes>
+          <TextAttributes>Category: {category}</TextAttributes>
           <TextAttributes>
             Website:{" "}
             <WebLink href={link} target="_blank">
