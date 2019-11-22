@@ -13,16 +13,20 @@ export default function ResourceForm() {
     const [subject, setSubject] = useState("");
     const [category, setCategory] = useState("");
     const [link, setLink] = useState("");
-    const [text, setText] = useState("Browser!");
+    const [posted, setPosted] = useState(false);
+    const [number, setNumber] = useState(0);
     const url = "https://forms.gle/CVMbXaZjVk1tnwjDA";
     const netlifyFunction = async event => {
         event.preventDefault();
         const resource = { name, email, title, subject, category, link };
-        console.log(resource);
-        if (text === "Browser!") {
-            const res = await axios.get("/.netlify/functions/resources");
-            setText(res.data);
-        }
+        // Additional validation checks on the form input need to be added
+        // Only performing validation for empty form fields currently
+        const invalid = Object.values(resource).some(input => input === "");
+        console.log(invalid, resource);
+        const res = await axios.post("/.netlify/functions/resources", resource);
+        // If post is successful, will need to lock form and redirect
+        setPosted(res.status === 200 ? true : false);
+        setNumber(number + parseInt(res.data, 10));
     };
     const googleForm = event => {
         event.preventDefault();
@@ -32,7 +36,7 @@ export default function ResourceForm() {
         <div className="container">
             <form className="resource-form">
                 <h2>Add Resource Form</h2>
-                {text}
+                <h4>Responses: {number}</h4>
                 <fieldset>
                     <label>
                         Full Name
