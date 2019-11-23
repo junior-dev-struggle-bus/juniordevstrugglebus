@@ -28,12 +28,14 @@ class Resources extends Component {
             ];
             this.setState({ resources });
             this.setState({ categories });
+            // console.log(resources)
         };
         resourceData();
     }
     
     render() {
         const { resources, categories } = this.state;
+        console.log(resources);
         return (
             <Switch>
                 <Route path={this.props.match.path} exact>
@@ -50,7 +52,7 @@ class Resources extends Component {
                         <div className="container">
                             {categories.map(category => {
                                 const resources = this.state.resources.filter(
-                                    resource => resource["language/topic"] === category
+                                    resource => resource["topic"] === category
                                 );
                                 return (
                                     <div style={{ padding: "1em" }}>
