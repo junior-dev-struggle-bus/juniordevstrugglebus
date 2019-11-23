@@ -1,0 +1,133 @@
+
+
+
+
+.resource-form {
+	text-align: center;
+	padding: 0 0 5em;
+}
+
+.resource-form h2 {
+	color: black;
+	line-height: 1.125 !important;
+	max-width: 14em;
+	padding: 0 2.5%;
+	margin: 0 auto;
+}
+
+.resource-form fieldset {
+	text-align: left;
+	max-width: 40em;
+	width: 90%;
+	margin: 1.5em auto 0;
+}
+
+.resource-form fieldset legend {
+	border: 0;
+	font-size: 1em;
+	font-weight: bold;
+	margin: 0 0 2.5em;
+}
+
+.resource-form fieldset legend p {
+	color: #4e4e4e;
+	line-height: 1.375;
+	margin: 0 0 1em;
+}
+
+/* Indicators of required fields that're applied dynamically */
+.resource-required {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #bf0a0a;
+	font-size: 0.9em;
+}
+
+.resource-required::after {
+	position: relative;
+	content: "*";
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	color: red;
+	font-size: 1.5em;
+	font-weight: bold;
+	top: 0.125em;
+	margin: 0 0.25em;
+}
+
+.resource-form label {
+	position: relative;
+	display: block;
+	font-size: 1em;
+	line-height: 1.25em;
+	margin: 0 auto 2em;
+}
+
+.resource-form input, .resource-form select {
+	/* border: 1px solid #cccccc !important; */
+	border-radius: 0px !important;
+	color: #404040 !important;
+	font-weight: bold;
+	height: 2.5em !important;
+	width: 100%;
+	padding: 0 1em !important;
+	margin: 0.25em auto 0 !important;
+}
+
+.resource-form input:disabled, .resource-form select:disabled {
+	background: #e8e8e8;
+}
+
+/* Placeholder stylings for input and select fields */
+.resource-form input::placeholder, .resource-form select:invalid {
+	color: #9e9e9e !important;
+	font-weight: 100;
+	font-style: italic;
+}
+
+.resource-form select:disabled {
+	cursor: default;
+}
+
+.resource-submit {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	font-weight: bold;
+	height: 2.5em;
+	max-width: 40em;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.resource-submit * {
+	font-size: 1rem !important;
+	border-radius: 50px;
+}
+
+.resource-submit > * {
+	height: 100%;
+	max-width: 12em;
+	min-width: 10em;
+	width: 40%;
+	margin: 0 2.5% 5%;
+}
+
+.resource-submit > * button {
+	height: 100%;
+	width: 100%;
+}
+
+.resource-submit button[disabled] {
+	background: #7e8ab5 !important;
+}
+
+
+@media (max-width: 425px) {
+	.resource-form fieldset {
+		width: 95%;
+	}
+}
+
+
+
