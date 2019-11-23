@@ -1,0 +1,25 @@
+
+
+
+
+.add-resource {
+	position: fixed;
+	background-color: black;
+	border-top: solid 2px gray;
+	border-radius: 25px 25px 0 0;
+	color: white;
+	cursor: pointer;
+	right: 7.5%;
+	bottom: 0;
+	min-height: 6vh;
+	padding: 1em;
+	transition: 1s;
+}
+
+.add-resource:hover {
+	background-color: orange;
+	color: black;
+}
+
+
+
