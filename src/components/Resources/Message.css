@@ -1,0 +1,47 @@
+
+
+
+
+output.success, output.failure {
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 1.25em;
+	margin: -1em 0 1.25em;
+}
+
+output.success {
+	background: #0ebf3e;
+}
+
+output.failure {
+	background: #f72f2f;
+}
+
+output.success span, output.failure span {
+	display: block;
+}
+
+output.success span:nth-of-type(1), output.failure span:nth-of-type(1) {
+	font-size: 1.75em;
+	margin: 0 0 0.25em;
+}
+
+output.success span:nth-of-type(2), output.failure span:nth-of-type(2) {
+	font-size: 1.25em;
+}
+
+
+@media (max-width: 1024px) {
+	output.success span:nth-of-type(1), output.failure span:nth-of-type(1) {
+		font-size: 1.25em;
+	}
+	output.success span:nth-of-type(2), output.failure span:nth-of-type(2) {
+		font-size: 1em;
+	}
+}
+
+
+

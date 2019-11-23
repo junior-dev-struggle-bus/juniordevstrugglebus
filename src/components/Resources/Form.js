@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+import Message from "./Message";
+
 import "./Form.css";
 
 
 
-export default function Form() {
+export default function Form(props) {
     const universal = { required: true };
     const preset = { value: "", ...universal };
     const [name, setName] = useState({ ...preset });
@@ -31,11 +33,10 @@ export default function Form() {
         // Only performing validation for empty form fields currently
         const valid = !form.some(([label, { value }]) => value === "");
         const data = form.reduce((object, [label, { value }]) => ({ ...object, [label]: value }), {});
-        console.log(valid, data);
-        const res = await axios.post("/.netlify/functions/resources", data);
-        // If post is successful, will need to initiate a page redirect
-        setAccepted(res.status === 200 ? true : false);
-        console.log(res.data);
+        if (valid) {
+            const res = await axios.post("/.netlify/functions/resources", data);
+            setAccepted(res.status === 200 ? true : false);
+        }
     };
     return (
         <div className="container">
@@ -49,12 +50,13 @@ export default function Form() {
                         </p>
                         <span className="resource-required">Required</span>
                     </legend>
+                    <Message history={props.history} view={posted} error={!accepted}/>
                     <label>
                         Full Name
                         {name.required && <span className="resource-required"/>}
                         <input
                             value={accepted ? "" : name.value} type="text" required={name.required}
-                            disabled={accepted} placeholder={!accepted && "Enter your full name"}
+                            disabled={accepted} placeholder={accepted ? "" : "Enter your full name"}
                             onChange={event => setName({ ...name, value: event.target.value })}
                         />
                     </label>
@@ -63,7 +65,7 @@ export default function Form() {
                         {email.required && <span className="resource-required"/>}
                         <input
                             value={accepted ? "" : email.value} type="email" required={email.required}
-                            disabled={accepted} placeholder={!accepted && "Enter your email address"}
+                            disabled={accepted} placeholder={accepted ? "" : "Enter your email address"}
                             onChange={event => setEmail({ ...email, value: event.target.value })}
                         />
                     </label>
@@ -72,7 +74,7 @@ export default function Form() {
                         {title.required && <span className="resource-required"/>}
                         <input
                             value={accepted ? "" : title.value} type="text" required={title.required}
-                            disabled={accepted} placeholder={!accepted && "Give the resource a title"}
+                            disabled={accepted} placeholder={accepted ? "" : "Give the resource a title"}
                             onChange={event => setTitle({ ...title, value: event.target.value })}
                         />
                     </label>
@@ -81,7 +83,7 @@ export default function Form() {
                         {subject.required && <span className="resource-required"/>}
                         <input
                             value={accepted ? "" : subject.value} type="text" required={subject.required}
-                            disabled={accepted} placeholder={!accepted && "Identify the resource topic"}
+                            disabled={accepted} placeholder={accepted ? "" : "Identify the resource topic"}
                             onChange={event => setSubject({ ...subject, value: event.target.value })}
                         />
                     </label>
@@ -108,7 +110,7 @@ export default function Form() {
                         {link.required && <span className="resource-required"/>}
                         <input
                             value={accepted ? "" : link.value} type="url" required={link.required}
-                            disabled={accepted} placeholder={!accepted && "Provide the resource URL"}
+                            disabled={accepted} placeholder={accepted ? "" : "Provide the resource URL"}
                             onChange={event => setLink({ ...link, value: event.target.value })}
                         />
                     </label>
