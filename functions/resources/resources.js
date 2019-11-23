@@ -8,7 +8,7 @@ function resources(event, context, callback) {
     callback(null, {
         statusCode: 200,
         // Must stringify as JSON if we want a JSON response body back
-        body: JSON.stringify("1")
+        body: JSON.stringify(resource)
     });
 }
 
