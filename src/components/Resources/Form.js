@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import "./ResourceForm.css";
+import "./Form.css";
 
 
 
-export default function ResourceForm() {
+export default function Form() {
     const universal = { required: true };
     const preset = { value: "", ...universal };
     const [name, setName] = useState({ ...preset });
@@ -22,7 +22,7 @@ export default function ResourceForm() {
         window.open(url, "_blank");
     }; */
     const [posted, setPosted] = useState(false);
-    const netlifyFunction = async event => {
+    const includeResource = async event => {
         event.preventDefault();
         const form = Object.entries({ name, email, title, subject, category, link });
         // Additional validation checks on the form input need to be added
@@ -114,7 +114,7 @@ export default function ResourceForm() {
                     <Link to="/resources">
                         <button>Back</button>
                     </Link>
-                    <button type="submit" onClick={netlifyFunction}>Add</button>
+                    <button type="submit" onClick={includeResource}>Add</button>
                     {/* <a href={url} target="_blank" rel="noopener noreferrer">
                         <button onClick={googleForm}>Google</button>
                     </a> */}

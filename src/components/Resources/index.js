@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import axios from "axios";
 
+import Form from "./Form";
 import Resource from "./Resource";
 import AddResource from "./AddResource";
-import ResourceForm from "./ResourceForm";
 import NotFound from "../NotFound";
 
 // Currently unused
@@ -79,7 +79,7 @@ class Resources extends Component {
                         </div>
                     )}
                 </Route>
-                <Route path={`${this.props.match.path}/add`} exact component={ResourceForm}/>
+                <Route path={`${this.props.match.path}/add`} exact component={Form}/>
                 <Route component={NotFound}/>
             </Switch>
         );
