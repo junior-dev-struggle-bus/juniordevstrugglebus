@@ -22,8 +22,10 @@ export default function Form() {
         window.open(url, "_blank");
     }; */
     const [posted, setPosted] = useState(false);
+    const [accepted, setAccepted] = useState(false);
     const includeResource = async event => {
         event.preventDefault();
+        setPosted(true);
         const form = Object.entries({ name, email, title, subject, category, link });
         // Additional validation checks on the form input need to be added
         // Only performing validation for empty form fields currently
@@ -31,8 +33,8 @@ export default function Form() {
         const data = form.reduce((object, [label, { value }]) => ({ ...object, [label]: value }), {});
         console.log(valid, data);
         const res = await axios.post("/.netlify/functions/resources", data);
-        // If post is successful, will need to lock form and redirect
-        setPosted(res.status === 200 ? true : false);
+        // If post is successful, will need to initiate a page redirect
+        setAccepted(res.status === 200 ? true : false);
         console.log(res.data);
     };
     return (
@@ -51,46 +53,47 @@ export default function Form() {
                         Full Name
                         {name.required && <span className="resource-required"/>}
                         <input
-                            value={name.value} type="text" required={name.required}
-                            placeholder="Enter your full name"
-                            onChange={event => setName({ ...name, value: event.target.value})}
+                            value={accepted ? "" : name.value} type="text" required={name.required}
+                            disabled={accepted} placeholder={!accepted && "Enter your full name"}
+                            onChange={event => setName({ ...name, value: event.target.value })}
                         />
                     </label>
                     <label>
                         Email Address
                         {email.required && <span className="resource-required"/>}
                         <input
-                            value={email.value} type="email" required={email.required}
-                            placeholder="Enter your email address"
-                            onChange={event => setEmail({ ...email, value: event.target.value})}
+                            value={accepted ? "" : email.value} type="email" required={email.required}
+                            disabled={accepted} placeholder={!accepted && "Enter your email address"}
+                            onChange={event => setEmail({ ...email, value: event.target.value })}
                         />
                     </label>
                     <label>
                         Resource Title
                         {title.required && <span className="resource-required"/>}
                         <input
-                            value={title.value} type="text" required={title.required}
-                            placeholder="Give the resource a title"
-                            onChange={event => setTitle({ ...title, value: event.target.value})}
+                            value={accepted ? "" : title.value} type="text" required={title.required}
+                            disabled={accepted} placeholder={!accepted && "Give the resource a title"}
+                            onChange={event => setTitle({ ...title, value: event.target.value })}
                         />
                     </label>
                     <label>
                         Technical Subject / Language
                         {subject.required && <span className="resource-required"/>}
                         <input
-                            value={subject.value} type="text" required={subject.required}
-                            placeholder="Identify the resource topic"
-                            onChange={event => setSubject({ ...subject, value: event.target.value})}
+                            value={accepted ? "" : subject.value} type="text" required={subject.required}
+                            disabled={accepted} placeholder={!accepted && "Identify the resource topic"}
+                            onChange={event => setSubject({ ...subject, value: event.target.value })}
                         />
                     </label>
                     <label>
                         Media / Platform Category
                         {category.required && <span className="resource-required"/>}
                         <select
-                            value={category.value} required={category.required}
-                            onChange={event => setCategory({ ...category, value: event.target.value})}
+                            value={accepted ? "" : category.value} required={category.required}
+                            disabled={accepted}
+                            onChange={event => setCategory({ ...category, value: event.target.value })}
                         >
-                            <option value="">Select a media category</option>
+                            <option value="">{!accepted ? "Select a media category" : ""}</option>
                             <option value="course">Course</option>
                             <option value="video">Video</option>
                             <option value="blog post">Blog Post</option>
@@ -104,9 +107,9 @@ export default function Form() {
                         Link To Resource
                         {link.required && <span className="resource-required"/>}
                         <input
-                            value={link.value} type="url" required={link.required}
-                            placeholder="Provide the resource URL"
-                            onChange={event => setLink({ ...link, value: event.target.value})}
+                            value={accepted ? "" : link.value} type="url" required={link.required}
+                            disabled={accepted} placeholder={!accepted && "Provide the resource URL"}
+                            onChange={event => setLink({ ...link, value: event.target.value })}
                         />
                     </label>
                 </fieldset>
@@ -114,7 +117,9 @@ export default function Form() {
                     <Link to="/resources">
                         <button>Back</button>
                     </Link>
-                    <button type="submit" onClick={includeResource}>Add</button>
+                    <button type="submit" disabled={accepted} onClick={includeResource}>
+                        Add
+                    </button>
                     {/* <a href={url} target="_blank" rel="noopener noreferrer">
                         <button onClick={googleForm}>Google</button>
                     </a> */}
@@ -123,5 +128,6 @@ export default function Form() {
         </div>
     );
 }
+
 
 
