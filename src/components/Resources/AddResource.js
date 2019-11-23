@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 import "./AddResource.css"
 
-
-
 export default function AddResource(props) {
     return (
         <Link to={`${props.match.path}/add`}>
@@ -14,6 +12,3 @@ export default function AddResource(props) {
         </Link>
     );
 }
-
-
-
