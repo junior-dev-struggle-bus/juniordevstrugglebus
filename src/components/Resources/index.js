@@ -7,11 +7,6 @@ import Resource from "./Resource";
 import AddResource from "./AddResource";
 import NotFound from "../NotFound";
 
-// Currently unused
-// import { SkeletonLine } from '../UI/Skeleton'
-
-
-
 class Resources extends Component {
     state = {
         resources: [],
@@ -28,14 +23,12 @@ class Resources extends Component {
             ];
             this.setState({ resources });
             this.setState({ categories });
-            // console.log(resources)
         };
         resourceData();
     }
     
     render() {
         const { resources, categories } = this.state;
-        console.log(resources);
         return (
             <Switch>
                 <Route path={this.props.match.path} exact>

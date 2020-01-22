@@ -8,14 +8,13 @@ import "./Form.css";
 
 const stringFormattedDateTime = () =>{
     const now = new Date();
-        const month = now.getMonth()+1 
-        const day = now.getDate()
-        const year = now.getFullYear()
-        const hour = now.getHours();
-        const minute = now.getMinutes();
-        return  `${month}/${day}/${year} ${hour}:${minute}`;
+    const month = now.getMonth() + 1; // getMonth indexes beginning at 0
+    const day = now.getDate();
+    const year = now.getFullYear();
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+    return  `${month}/${day}/${year} ${hour}:${minute}`;
 }
-
 
 export default function Form(props) {
     const universal = { required: true };
