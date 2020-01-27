@@ -7,11 +7,6 @@ import Resource from "./Resource";
 import AddResource from "./AddResource";
 import NotFound from "../NotFound";
 
-// Currently unused
-// import { SkeletonLine } from '../UI/Skeleton'
-
-
-
 class Resources extends Component {
     state = {
         resources: [],
@@ -20,23 +15,11 @@ class Resources extends Component {
     
     componentDidMount() {
         const resourceData = async () => {
-            const resp = await axios.get("https://natespilman.tech/jdsb/resources/");
-            const data = await resp.data;
-            const headers = await data[0].map(json =>
-                json.toLowerCase().replace(/ /g, "").replace(/[{()}]/g, "")
-            );
-            data.shift();
-            
-            const resources = [];
-            await data.forEach(line => {
-                const obj = {};
-                for (let i = 0; i < line.length; i++) {
-                    obj[headers[i]] = line[i];
-                }
-                resources.push(obj);
-            });
+            const resp = await axios.get("/.netlify/functions/allResources");
+            const resources = await resp.data.map(resp => resp.data);
+
             const categories = [
-                ...new Set(resources.map(resource => resource["language/topic"]))
+                ...new Set(resources.map(resource => resource.topic))
             ];
             this.setState({ resources });
             this.setState({ categories });
@@ -62,7 +45,7 @@ class Resources extends Component {
                         <div className="container">
                             {categories.map(category => {
                                 const resources = this.state.resources.filter(
-                                    resource => resource["language/topic"] === category
+                                    resource => resource["topic"] === category
                                 );
                                 return (
                                     <div style={{ padding: "1em" }}>

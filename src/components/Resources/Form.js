@@ -6,15 +6,23 @@ import Message from "./Message";
 
 import "./Form.css";
 
-
+const stringFormattedDateTime = () =>{
+    const now = new Date();
+    const month = now.getMonth() + 1; // getMonth indexes beginning at 0
+    const day = now.getDate();
+    const year = now.getFullYear();
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+    return  `${month}/${day}/${year} ${hour}:${minute}`;
+}
 
 export default function Form(props) {
     const universal = { required: true };
     const preset = { value: "", ...universal };
-    const [name, setName] = useState({ ...preset });
+    const [submitter, setSubmitter] = useState({ ...preset });
     const [email, setEmail] = useState({ ...preset });
     const [title, setTitle] = useState({ ...preset });
-    const [subject, setSubject] = useState({ ...preset });
+    const [topic, setTopic] = useState({ ...preset });
     const [category, setCategory] = useState({ ...preset });
     const [link, setLink] = useState({ ...preset });
     // Redirection resources for the previosly used Google form
@@ -28,13 +36,15 @@ export default function Form(props) {
     const includeResource = async event => {
         event.preventDefault();
         setPosted(true);
-        const form = Object.entries({ name, email, title, subject, category, link });
+        const form = Object.entries({ submitter, email, title, topic, category, link });
         // Additional validation checks on the form input need to be added
         // Only performing validation for empty form fields currently
         const valid = !form.some(([label, { value }]) => value === "");
         const data = form.reduce((object, [label, { value }]) => ({ ...object, [label]: value }), {});
+        data.timestamp = stringFormattedDateTime();
+
         if (valid) {
-            const res = await axios.post("/.netlify/functions/resources", data);
+            const res = await axios.post("/.netlify/functions/allResources", data);
             setAccepted(res.status === 200 ? true : false);
         }
     };
@@ -53,11 +63,11 @@ export default function Form(props) {
                     <Message history={props.history} view={posted} error={!accepted}/>
                     <label>
                         Full Name
-                        {name.required && <span className="resource-required"/>}
+                        {submitter.required && <span className="resource-required"/>}
                         <input
-                            value={accepted ? "" : name.value} type="text" required={name.required}
+                            value={accepted ? "" : submitter.value} type="text" required={submitter.required}
                             disabled={accepted} placeholder={accepted ? "" : "Enter your full name"}
-                            onChange={event => setName({ ...name, value: event.target.value })}
+                            onChange={event => setSubmitter({ ...submitter, value: event.target.value })}
                         />
                     </label>
                     <label>
@@ -80,11 +90,11 @@ export default function Form(props) {
                     </label>
                     <label>
                         Technical Subject / Language
-                        {subject.required && <span className="resource-required"/>}
+                        {topic.required && <span className="resource-required"/>}
                         <input
-                            value={accepted ? "" : subject.value} type="text" required={subject.required}
+                            value={accepted ? "" : topic.value} type="text" required={topic.required}
                             disabled={accepted} placeholder={accepted ? "" : "Identify the resource topic"}
-                            onChange={event => setSubject({ ...subject, value: event.target.value })}
+                            onChange={event => setTopic({ ...topic, value: event.target.value })}
                         />
                     </label>
                     <label>

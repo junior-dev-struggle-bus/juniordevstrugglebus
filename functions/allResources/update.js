@@ -11,7 +11,7 @@ exports.handler = async (event, context) => {
   const id = event.id
   console.log(`Function 'update' invoked. update id: ${id}`)
   return client
-    .query(q.Update(q.Ref(`classes/items/${id}`), { data }))
+    .query(q.Update(q.Ref(`classes/Resource/${id}`), { data }))
     .then(response => {
       console.log('success', response)
       return {
