@@ -101,9 +101,9 @@ const Organization = props => {
         <h4 style={{ color: "white", padding: "0 0 1em 0" }}>
           Board of Directors
         </h4>
-        {bodList.map(position => {
+        {bodList.map((position, index) => {
           return (
-            <Position>
+            <Position key={index}>
               {position.title} - {position.name}
             </Position>
           );
@@ -112,9 +112,9 @@ const Organization = props => {
         <h4 style={{ color: "white", padding: "1em 0 1em 0" }}>
           Executive Team
         </h4>
-        {execList.map(position => {
+        {execList.map((position, index) => {
           return (
-            <Position>
+            <Position key={index}>
               {position.title} - {position.name}
             </Position>
           );
