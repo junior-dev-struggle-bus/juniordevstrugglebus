@@ -88,7 +88,7 @@ class Resources extends Component {
             resource => resource["language/topic"] === category
           );
           return (
-            <div
+            <div key={category}
               style={{
                 padding: "1em"
               }}
@@ -96,7 +96,7 @@ class Resources extends Component {
               <h2 className="text-left">{category}</h2>
               <div>
                 {resources.map(resource => (
-                  <Resource resource={resource} />
+                  <Resource key={resource.link} resource={resource} />
                 ))}
               </div>
             </div>
