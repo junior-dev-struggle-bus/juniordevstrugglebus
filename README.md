@@ -1,9 +1,10 @@
 # Welcome to the Junior Dev Struggle Bus Website
+
 ## This is a Struggle Bus community driven project
 
-Log issues, make pull requests. Let's build something that benefits the community as a whole, whether that's provide educational resources, a feeling of community involvement, or some new portfolio pieces. 
+Log issues, make pull requests. Let's build something that benefits the community as a whole, whether that's provide educational resources, a feeling of community involvement, or some new portfolio pieces.
 
-Happy Hacking :-) 
+Happy Hacking :-)
 
 # create-react-app boiler plate info - how it install once you clone the repo
 
@@ -75,3 +76,39 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+# Style Guide
+
+## Colors
+
+### Primary
+
+Hex: #E45064<br/>
+RGB: rgb(228, 80, 100)<br/>
+
+### Black
+
+Hex: #404040<br/>
+RGB: rgb(64, 64, 64)<br/>
+
+### White
+
+Hex: #FFFFFF<br/>
+RGB: rgb(255, 255, 255)<br/>
+
+### Background
+
+Hex: #F4F4F4<br/>
+RGB: rgb(244, 244, 244)<br/>
+
+## Font Families
+
+### Headers
+
+Default font family: Ubuntu
+
+### All other text elements
+
+Default font family: Ubuntu Mono
+
+_Both fonts are availbale at fonts.google.com_
