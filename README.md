@@ -81,34 +81,31 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### Colors
 
-#### Primary
-
-Hex: #E45064<br/>
-RGB: rgb(228, 80, 100)<br/>
-
-#### Black
-
-Hex: #404040<br/>
-RGB: rgb(64, 64, 64)<br/>
-
-#### White
-
-Hex: #FFFFFF<br/>
-RGB: rgb(255, 255, 255)<br/>
-
-#### Background
-
-Hex: #F4F4F4<br/>
-RGB: rgb(244, 244, 244)<br/>
+| Color name             | Hex     | RGB                |
+| ---------------------- | ------- | ------------------ |
+| Primary (pink)         | #E45064 | rgb(228, 80, 100)  |
+| Black                  | #404040 | rgb(64, 64, 64)    |
+| White                  | #FFFFFF | rgb(255, 255, 255) |
+| Background (off-white) | #F4F4F4 | rgb(244, 244, 244) |
 
 ### Font Families
 
-#### Headers
+| Text Elements           | Default Family | Fallbacks |
+| ----------------------- | -------------- | --------- |
+| Headers                 | Ubuntu         | serif     |
+| All other text elements | Ubuntu Mono    | monospace |
 
-Default font family: Ubuntu
+_***Ubuntu*** and ***Ubuntu Mono*** are availbale at fonts.google.com_
 
-#### All other text elements
+### Font Sizes
 
-Default font family: Ubuntu Mono
-
-_Both fonts are availbale at fonts.google.com_
+| Text Elements          | Desktop + Tablet | Mobile         |
+| ---------------------- | ---------------- | -------------- |
+| h1                     | 4rem (64px)      | 2.75rem (44px) |
+| h2                     | 2rem (32px)      | 1.5rem (24px)  |
+| h3                     | 1.5rem (24px)    | 1.25rem (20px) |
+| p, a, span, strong, em | 1rem (16px)      | 1rem (16px)    |
+| Main Nav Links         | 1.25rem (20px)   | 1.5rem (24px)  |
+| Button, Footer Links   | 1.25rem (20px)   | 1rem (16px)    |
+| Resource Tag           | .75rem (12px)    | .75rem (12px)  |
+| Brand                  | 2.5rem (40px)    | 1.5rem (24px)  |
