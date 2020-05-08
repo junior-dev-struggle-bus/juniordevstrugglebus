@@ -77,37 +77,37 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-# Style Guide
+## Style Guide
 
-## Colors
+### Colors
 
-### Primary
+#### Primary
 
 Hex: #E45064<br/>
 RGB: rgb(228, 80, 100)<br/>
 
-### Black
+#### Black
 
 Hex: #404040<br/>
 RGB: rgb(64, 64, 64)<br/>
 
-### White
+#### White
 
 Hex: #FFFFFF<br/>
 RGB: rgb(255, 255, 255)<br/>
 
-### Background
+#### Background
 
 Hex: #F4F4F4<br/>
 RGB: rgb(244, 244, 244)<br/>
 
-## Font Families
+### Font Families
 
-### Headers
+#### Headers
 
 Default font family: Ubuntu
 
-### All other text elements
+#### All other text elements
 
 Default font family: Ubuntu Mono
 
