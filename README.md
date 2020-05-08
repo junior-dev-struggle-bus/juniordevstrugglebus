@@ -109,3 +109,22 @@ _***Ubuntu*** and ***Ubuntu Mono*** are availbale at fonts.google.com_
 | Button, Footer Links   | 1.25rem (20px)   | 1rem (16px)    |
 | Resource Tag           | .75rem (12px)    | .75rem (12px)  |
 | Brand                  | 2.5rem (40px)    | 1.5rem (24px)  |
+
+### Container
+
+```
+max-width: 1100px;
+width: 90%;
+```
+
+### Margin and Padding values
+
+```
+1:  .5rem (8px)
+2:  1rem (16px)
+3:  1.5rem (24px)
+4:  2rem (32px)
+5:  3rem (48px)
+6:  4rem (64px)
+7:  6rem (96px)
+```
