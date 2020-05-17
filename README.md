@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Colors
 
-| Color name             | Hex     | RGB                |
+| Color variable name    | Hex     | RGB                |
 | ---------------------- | ------- | ------------------ |
 | Primary (pink)         | #E45064 | rgb(228, 80, 100)  |
 | Black                  | #404040 | rgb(64, 64, 64)    |
@@ -48,14 +48,23 @@ max-width: 1100px;
 width: 90%;
 ```
 
-### Margin and Padding values
+### Breakpoints
 
-```
-1:  .5rem (8px)
-2:  1rem (16px)
-3:  1.5rem (24px)
-4:  2rem (32px)
-5:  3rem (48px)
-6:  4rem (64px)
-7:  6rem (96px)
-```
+| Breakpoint variable name | Value (pixels) |
+| ------------------------ | -------------- |
+| breakpoint-sm            | 576px          |
+| breakpoint-md            | 768px          |
+| breakpoint-lg            | 992px          |
+| breakpoint-xl            | 1200px         |
+
+### Spacing (margin and padding values)
+
+| Space variable name | Value (rems/pixels) |
+| ------------------- | ------------------- |
+| space-xxs           | .5rem (8px)         |
+| space-xs            | 1rem (16px)         |
+| space-sm            | 1.5rem (24px)       |
+| space-md            | 2rem (32px)         |
+| space-lg            | 3rem (48px)         |
+| space-xl            | 4rem (64px)         |
+| space-xxl           | 6rem (96px)         |
