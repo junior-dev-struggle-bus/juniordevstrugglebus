@@ -1,0 +1,48 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@700&display=swap");
+
+:root {
+  /* Breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  /* Colors */
+  --primary-color: #e45064;
+  --black: #404040;
+  --white: #ffffff;
+  --background-color: #f4f4f4;
+
+  /* Font Sizing */
+  --font-size-sm: 0.75rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --title-1: 1.5rem;
+  --title-2: 2rem;
+  --title-3: 2.5rem;
+  --title-4: 3rem;
+  --title-5: 4rem;
+
+  /* Spacing (margin and padding values) */
+  --space-xxs: 0.5rem;
+  --space-xs: 1rem;
+  --space-sm: 1.5rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
+  --space-xxl: 6rem;
+}
+
+* {
+  font-family: "Ubuntu Mono", monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Ubuntu, Helvetica, sans-serif;
+}
