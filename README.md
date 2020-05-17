@@ -26,7 +26,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 | Headings                | Ubuntu         | serif     |
 | All other text elements | Ubuntu Mono    | monospace |
 
-_***Ubuntu*** and ***Ubuntu Mono*** are availbale at fonts.google.com_
+_***Ubuntu*** and ***Ubuntu Mono*** are availbale at [fonts.google.com](https://www.fonts.google.com)_
 
 ### Font Sizes
 
