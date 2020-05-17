@@ -12,12 +12,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Colors
 
-| Color variable name    | Hex     | RGB                |
-| ---------------------- | ------- | ------------------ |
-| Primary (pink)         | #E45064 | rgb(228, 80, 100)  |
-| Black                  | #404040 | rgb(64, 64, 64)    |
-| White                  | #FFFFFF | rgb(255, 255, 255) |
-| Background (off-white) | #F4F4F4 | rgb(244, 244, 244) |
+| Color variable name          | Hex     | RGB                |
+| ---------------------------- | ------- | ------------------ |
+| primary-color (pink)         | #E45064 | rgb(228, 80, 100)  |
+| black                        | #404040 | rgb(64, 64, 64)    |
+| white                        | #FFFFFF | rgb(255, 255, 255) |
+| background-color (off-white) | #F4F4F4 | rgb(244, 244, 244) |
 
 ### Font Families
 
