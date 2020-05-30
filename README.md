@@ -1,77 +1,63 @@
 # Welcome to the Junior Dev Struggle Bus Website
+
 ## This is a Struggle Bus community driven project
 
-Log issues, make pull requests. Let's build something that benefits the community as a whole, whether that's provide educational resources, a feeling of community involvement, or some new portfolio pieces. 
+Log issues, make pull requests. Let's build something that benefits the community as a whole, whether that's provide educational resources, a feeling of community involvement, or some new portfolio pieces.
 
-Happy Hacking :-) 
-
-# create-react-app boiler plate info - how it install once you clone the repo
+Happy Hacking :-)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Style Guide
 
-In the project directory, you can run:
+### Colors
 
-### `npm start`
+| Color (variable name)          | Hex     | RGB                |
+| ------------------------------ | ------- | ------------------ |
+| --primary-color (pink)         | #E45064 | rgb(228, 80, 100)  |
+| --black                        | #404040 | rgb(64, 64, 64)    |
+| --white                        | #FFFFFF | rgb(255, 255, 255) |
+| --background-color (off-white) | #F4F4F4 | rgb(244, 244, 244) |
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Font Families
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+| Text Elements           | Default Family | Fallbacks |
+| ----------------------- | -------------- | --------- |
+| Headings                | Ubuntu         | serif     |
+| All other text elements | Ubuntu Mono    | monospace |
 
-### `npm test`
+_***Ubuntu*** and ***Ubuntu Mono*** are availbale at [fonts.google.com](https://fonts.google.com)_
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Font Sizes
 
-### `npm run build`
+| Font Size (variable name) | Desktop + Tablet |
+| ------------------------- | ---------------- |
+| --font-size-sm            | 0.75rem (12px)   |
+| --font-size-md            | 1rem (16px)      |
+| --font-size-lg            | 1.25rem (20px)   |
+| --title-1                 | 1.5rem (24px)    |
+| --title-2                 | 2rem (32px)      |
+| --title-3                 | 2.5rem (40px)    |
+| --title-4                 | 3rem (48px)      |
+| --title-5                 | 4rem (64px)      |
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Breakpoints
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+| Breakpoint (variable name) | Value (pixels) |
+| -------------------------- | -------------- |
+| --breakpoint-sm            | 576px          |
+| --breakpoint-md            | 768px          |
+| --breakpoint-lg            | 992px          |
+| --breakpoint-xl            | 1200px         |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Spacing (margin and padding values)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+| Space (variable name) | Value (rems/pixels) |
+| --------------------- | ------------------- |
+| --space-xxs           | .5rem (8px)         |
+| --space-xs            | 1rem (16px)         |
+| --space-sm            | 1.5rem (24px)       |
+| --space-md            | 2rem (32px)         |
+| --space-lg            | 3rem (48px)         |
+| --space-xl            | 4rem (64px)         |
+| --space-xxl           | 6rem (96px)         |
