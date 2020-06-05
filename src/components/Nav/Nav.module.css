@@ -1,0 +1,18 @@
+.linkList {
+  list-style-type: none;
+}
+
+.navLinkItem {
+  display: inline-block;
+  margin-right: var(--space-lg);
+}
+
+.navLinkItem:last-child {
+  margin-right: 0;
+}
+
+.navLink {
+  font-size: var(--font-size-lg);
+  color: var(--black);
+  text-decoration: none;
+}

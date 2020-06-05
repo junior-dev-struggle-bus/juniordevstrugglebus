@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./css/normalize.css";
 import "./css/global.css";
 
@@ -18,7 +18,7 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-        <Header link={Link} />
+        <Header />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/resources" component={Resources} />
