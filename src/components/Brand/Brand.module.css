@@ -1,7 +1,14 @@
 .brand {
   color: var(--primary-color);
-  font-size: var(--title-3);
+  font-size: var(--title-1);
   font-family: Ubuntu, Helvetica, sans-serif;
   font-weight: bold;
   text-decoration: none;
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  .brand {
+    font-size: var(--title-3);
+  }
 }

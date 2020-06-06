@@ -3,22 +3,26 @@ import { Link } from "react-router-dom";
 
 import styles from "./Nav.module.css";
 
-export default function () {
+export default function ({ showNav, toggleNav }) {
   return (
-    <nav>
+    <nav className={`${styles.nav} ${showNav ? styles.showNav : ""}`}>
       <ul className={styles.linkList}>
         <li className={styles.navLinkItem}>
-          <Link to="/resources" className={styles.navLink}>
+          <Link to="/resources" className={styles.navLink} onClick={toggleNav}>
             Resources
           </Link>
         </li>
         <li className={styles.navLinkItem}>
-          <Link to="/events" className={styles.navLink}>
+          <Link to="/events" className={styles.navLink} onClick={toggleNav}>
             Upcoming Events
           </Link>
         </li>
         <li className={styles.navLinkItem}>
-          <Link to="/organization" className={styles.navLink}>
+          <Link
+            to="/organization"
+            className={styles.navLink}
+            onClick={toggleNav}
+          >
             About
           </Link>
         </li>
@@ -26,7 +30,9 @@ export default function () {
           <a
             href="https://juniordevstruggleblog.com/"
             target="_blank"
+            rel="noopener noreferrer"
             className={styles.navLink}
+            onClick={toggleNav}
           >
             Blog
           </a>

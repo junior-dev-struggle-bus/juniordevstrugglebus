@@ -1,0 +1,12 @@
+.navToggle {
+  font-size: var(--title-1);
+  color: var(--black);
+  z-index: 100;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .navToggle {
+    display: none;
+  }
+}
