@@ -1,0 +1,56 @@
+.titleHighlight {
+  color: var(--primary-color);
+  font-family: Ubuntu, Helvetica, sans-serif;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+}
+.btn:first-of-type {
+  margin: 0 0 var(--space-xxs) 0;
+}
+.githubWrapper {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-md);
+  font-weight: bold;
+  margin-top: var(--space-sm);
+}
+.workWithUs {
+  margin: -0.5rem var(--space-xs) 0 0;
+}
+.homeWrapper {
+  padding: var(--space-lg) 0;
+  min-height: 55vh;
+}
+.homeImageWrapper {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    display: inline-flex;
+    margin: 0;
+  }
+  .btn:first-of-type {
+    margin: 0 var(--space-xs) 0 0;
+  }
+  .homeWrapper {
+    display: flex;
+    padding: var(--space-xxl) 0;
+  }
+  .homeContent {
+    min-width: 500px;
+  }
+  .homeImageWrapper {
+    display: block;
+  }
+  .homeImage {
+    width: 100%;
+    min-width: 550px;
+  }
+  .githubWrapper {
+    font-size: var(--font-size-lg);
+    margin-top: var(--space-lg);
+  }
+}
