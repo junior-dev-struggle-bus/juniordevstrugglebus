@@ -1,0 +1,17 @@
+.resourceTitle {
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  margin: 0 0 var(--space-xs);
+}
+.link {
+  text-decoration: none;
+  display: block;
+  margin: 0 0 var(--space-xs);
+  color: var(--black);
+}
+
+@media (min-width: 768px) {
+  .resourceTitle {
+    font-size: var(--title-1);
+  }
+}

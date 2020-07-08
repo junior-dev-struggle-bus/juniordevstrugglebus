@@ -54,6 +54,33 @@ h6 {
 .App {
   overflow: hidden;
 }
+.fullPage {
+  min-height: 100vh;
+}
+
+.groupTitle {
+  padding: var(--space-xs);
+  color: var(--primary-color);
+  border-left: solid 8px;
+  margin: 0 0 var(--space-xxs);
+  font-size: var(--title-1);
+}
+
+.groupItem {
+  padding: var(--space-xs);
+  color: var(--black);
+  border-left: solid 8px;
+  margin-bottom: var(--space-xxs);
+}
+
+.label {
+  background-color: var(--black);
+  color: var(--white);
+  padding: var(--space-xxs);
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+}
 
 /* Headings */
 .title5 {
@@ -100,5 +127,8 @@ h6 {
   .title1 {
     font-size: var(--title-1);
     margin: 0 0 var(--space-lg) 0;
+  }
+  .groupTitle {
+    font-size: var(--title-2);
   }
 }
