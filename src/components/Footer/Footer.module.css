@@ -2,6 +2,7 @@
   background-color: var(--black);
   padding: var(--space-md);
   text-align: center;
+  margin-top: var(--space-xxl);
 }
 
 .nav {
@@ -43,6 +44,5 @@
   }
   .footer {
     padding: var(--space-xl);
-    margin-top: var(--space-xxl);
   }
 }
