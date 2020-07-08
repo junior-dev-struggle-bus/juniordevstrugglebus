@@ -38,6 +38,10 @@
   font-family: "Ubuntu Mono", monospace;
 }
 
+body {
+  background-color: var(--background-color);
+}
+
 h1,
 h2,
 h3,
@@ -45,4 +49,56 @@ h4,
 h5,
 h6 {
   font-family: Ubuntu, Helvetica, sans-serif;
+}
+
+.App {
+  overflow: hidden;
+}
+
+/* Headings */
+.title5 {
+  font-size: var(--title-4);
+  margin: 0 0 0.75rem 0;
+}
+.title1 {
+  font-size: var(--font-size-lg);
+  margin: 0 0 var(--space-md) 0;
+  line-height: 1.25;
+}
+
+/* Buttons */
+.btn {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-md);
+  display: inline-flex;
+  align-items: center;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn.primary {
+  background-color: var(--primary-color);
+}
+
+.btn.alt {
+  background-color: var(--black);
+}
+
+.btn .icon {
+  margin-right: 0.4rem;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    font-size: var(--font-size-lg);
+  }
+  .title5 {
+    font-size: var(--title-5);
+    margin: 0 0 var(--space-sm) 0;
+  }
+  .title1 {
+    font-size: var(--title-1);
+    margin: 0 0 var(--space-lg) 0;
+  }
 }

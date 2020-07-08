@@ -7,6 +7,10 @@
   z-index: 100;
 }
 
+.brand.white {
+  color: var(--white);
+}
+
 @media (min-width: 768px) {
   .brand {
     font-size: var(--title-3);

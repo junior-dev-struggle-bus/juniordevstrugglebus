@@ -8,8 +8,9 @@ import "./css/global.css";
 // import "./css/theme.css";
 
 import Container from "./components/Container/Container";
-import Home from "./components/Home";
+import Home from "./components/Home/Home";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import Resources from "./components/Resources";
 import Events from "./components/Events";
 import Organization from "./components/Organization";
@@ -18,8 +19,8 @@ import NotFound from "./components/NotFound";
 export default function App() {
   return (
     <div className="App">
-      <Container>
-        <Router>
+      <Router>
+        <Container>
           <Header />
           <Switch>
             <Route path="/" exact component={Home} />
@@ -36,8 +37,9 @@ export default function App() {
             />
             <Route component={NotFound} />
           </Switch>
-        </Router>
-      </Container>
+        </Container>
+        <Footer />
+      </Router>
     </div>
   );
 }
