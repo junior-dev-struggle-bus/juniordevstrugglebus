@@ -102,6 +102,8 @@ h6 {
   color: var(--white);
   text-decoration: none;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
 
 .btn.primary {

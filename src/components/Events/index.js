@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styles from "./Events.module.css";
 
 import EventItem from "./EventItem";
 import HideBiweekly from "./HideBiweekly";
@@ -9,7 +10,7 @@ import HideBiweekly from "./HideBiweekly";
 const MEETUP_API =
   "https://cors-anywhere.herokuapp.com/https://api.meetup.com/The-Junior-Dev-Struggle-Bus/events?&page=5";
 
-function Events() {
+export default function () {
   const [events, setEvents] = useState([]);
   const [hideBiweekly, setHideBiweekly] = useState(false);
 
@@ -19,7 +20,8 @@ function Events() {
 
       if (hideBiweekly) {
         const noBiweekly = data.filter(
-          event => event.name !== "The Struggle Deluxe - Coding Open Study Lab"
+          (event) =>
+            event.name !== "The Struggle Deluxe - Coding Open Study Lab"
         );
         setEvents(noBiweekly);
       } else {
@@ -32,15 +34,14 @@ function Events() {
 
   return (
     <div className="container">
+      <h1 className={`title5 ${styles.pageTitle}`}>Upcoming Events</h1>
       <HideBiweekly
         hideBiweekly={hideBiweekly}
         setHideBiweekly={setHideBiweekly}
       />
-      {events.map(event => (
+      {events.map((event) => (
         <EventItem key={event.id} event={event} />
       ))}
     </div>
   );
 }
-
-export default Events;
