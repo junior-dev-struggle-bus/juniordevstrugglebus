@@ -1,17 +1,18 @@
 import React from "react";
+import styles from "./HideBiweekly.module.css";
 
-function HideBiweekly({ hideBiweekly, setHideBiweekly }) {
+export default function ({ hideBiweekly, setHideBiweekly }) {
   const handleClick = () => {
     setHideBiweekly(!hideBiweekly);
   };
 
   return (
-    <div className="container-fluid">
-      <button type="button" className="btn" onClick={handleClick}>
-        {hideBiweekly ? "Show Biweekly Meetups" : "Hide Biweekly Meetups"}
-      </button>
-    </div>
+    <button
+      type="button"
+      className={`btn primary ${styles.btn}`}
+      onClick={handleClick}
+    >
+      {hideBiweekly ? "Show Biweekly Meetups" : "Hide Biweekly Meetups"}
+    </button>
   );
 }
-
-export default HideBiweekly;

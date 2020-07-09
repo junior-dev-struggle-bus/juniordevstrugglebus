@@ -1,0 +1,8 @@
+.pageTitle {
+  margin: var(--space-md) 0 var(--space-md);
+}
+@media (min-width: 768px) {
+  .pageTitle {
+    margin: var(--space-md) 0 var(--space-xl);
+  }
+}

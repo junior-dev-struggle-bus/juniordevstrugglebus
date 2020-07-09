@@ -1,0 +1,15 @@
+.eventItem {
+  margin: 0 0 var(--space-lg);
+}
+
+.eventTitle {
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  margin: 0 0 var(--space-xs);
+}
+
+@media (min-width: 768px) {
+  .eventTitle {
+    font-size: var(--title-1);
+  }
+}
