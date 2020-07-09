@@ -1,133 +1,94 @@
 import React from "react";
-import styled from "styled-components";
+
+import styles from "./About.module.css";
 
 import orgImage from "../../img/orgPage.jpeg";
 
-const Aboutsection = styled.div`
-  background-color: black;
-  width: 100vw;
-  padding: 2em;
-  border-radius: 3m;
-  margin: 2em 0;
-`;
-
-const Styledp = styled.div`
-  padding: 3em 20em;
-  color: white;
-`;
-
-const Position = styled.div`
-  color: white;
-`;
-
-const Organization = props => {
-  const bodList = [
-    { name: "Brett Hurst", title: "Chairman of the Board" },
-    { name: "Nate Spilman", title: "Member of the Board" },
-    { name: "Christina Roufosse", title: "Member of the Board" },
-    { name: "Lizzy Presland", title: "Member of the Board" },
-    { name: "Joseph Burchetta", title: "Member of the Board" },
-  ];
-  const execList = [
-    { name: "Brett Hurst", title: "President" },
-    { name: "Nate Spilman", title: "Vice President" },
-    { name: "Nate Spilman", title: "Treasurer" },
-    { name: "Daniel Kluss", title: "Secretary" }
-  ];
+export default function (props) {
   return (
-    <div>
-      <section className="imageblock about-1 bg--secondary">
-        <div className="imageblock__content col-md-6 col-sm-4 pos-right">
-          <div
-            className=""
-            style={{
-              opacity: 1,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%"
-            }}
-          >
-            <img style={{padding:"1em"}} alt="image" src="https://secure.meetupstatic.com/photos/event/4/f/a/0/highres_483860384.jpeg" />
-          </div>
-        </div>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-5 col-sm-8 text-left">
-              <h1 style={{ paddingBottom: "1em" }}>
-                About the Junior Dev Struggle Bus
-              </h1>
-              <h3>Vision</h3>
-              <p>
-                A tech community learning, building, and succeeding through
-                helping one another.
-              </p>
-              <h3>Mission</h3>
-              <p>
-                We provide an open and supportive community to eliminate
-                barriers to opportunity and enhance the technical confidence of
-                those interested in technology.
-              </p>
-              <h3>Values</h3>
-              <ul>
-                <li>
-                  <b>Collaboration:</b> We are a community of builders making
-                  connections with each other over tech.
-                </li>
-                <li>
-                  <b>Encouragement:</b> Helping to dismantle fear and doubt through
-                  support, praise, or advice to develop self-trust.
-                </li>
-                <li>
-                  <b>Inclusivity:</b> Everyone should not only be welcomed, but
-                  actively encouraged to participate.
-                </li>
-                <li>
-                  <b>Community:</b> we focus on where we can provide value in the
-                  community and take action in those areas.
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* <!--end of row--> */}
-        </div>
-        {/* <!--end of container--> */}
-      </section>
-      <Styledp></Styledp>
-      <Aboutsection id="exec">
-        <h3 style={{ color: "white", padding: "0 0 1em 0" }}>
-          The Executive Team and Board of Directors
-        </h3>
-        <h4 style={{ color: "white", padding: "0 0 1em 0" }}>
-          Board of Directors
-        </h4>
-        {bodList.map(position => {
-          return (
-            <Position>
-              {position.title} - {position.name}
-            </Position>
-          );
-        })}
+    <>
+      <h1 className={`title5 ${styles.pageTitle}`}>About JDSB</h1>
 
-        <h4 style={{ color: "white", padding: "1em 0 1em 0" }}>
-          Executive Team
-        </h4>
-        {execList.map(position => {
-          return (
-            <Position>
-              {position.title} - {position.name}
-            </Position>
-          );
-        })}
-        <Styledp>Interested in joining the team? Let us know!</Styledp>
-      </Aboutsection>
-      {/* <!--end of row--> */}
-      <Styledp />
+      <h2 className={`title2 ${styles.subtitle}`}>Who we are</h2>
+      <p className="paragraph">
+        <img
+          src="https://secure.meetupstatic.com/photos/event/4/f/a/0/highres_483860384.jpeg"
+          alt="The JDSB members"
+          className={styles.image}
+        />
+        The Junior Dev Struggle Bus is a tech community learning, building, and
+        succeeding through helping one another. We provide an open and
+        supportive community to eliminate barriers to opportunity and enhance
+        the technical confidence of those interested in technology. Come with
+        your woes and laptops, sip on some Joe, get advice on planning your job
+        hunt, make new friends, learn and teach new tech, pair program, show off
+        your projects, etc. We are laid back and friendly and were here to
+        foster an open minded and caring environment that’s focused on helping
+        each other. We value collaboration, encouragement, inclusivity and
+        community, so come hang out!
+      </p>
 
-      {/* <!--end of row--> */}
-      {/* <!--end of container--> */}
-    </div>
+      <h2 className={`title2 ${styles.subtitle}`}>Vision</h2>
+      <p className="paragraph">
+        A tech community learning, building, and succeeding through helping one
+        another.
+      </p>
+
+      <h2 className={`title2 ${styles.subtitle}`}>Mission</h2>
+      <p className="paragraph">
+        We provide an open and supportive community to eliminate barriers to
+        opportunity and enhance the technical confidence of those interested in
+        technology.
+      </p>
+
+      <h2 className={`title2 ${styles.subtitle}`}>Values</h2>
+      <p className="paragraph">
+        <strong>Collaboration:</strong> We are a community of builders making
+        connections with each other over tech.
+      </p>
+      <p className="paragraph">
+        <strong>Encouragement:</strong> Helping to dismantle fear and doubt
+        through support, praise, or advice to develop self-trust.
+      </p>
+      <p className="paragraph">
+        <strong>Inclusivity:</strong> Everyone should not only be welcomed, but
+        actively encouraged to participate.
+      </p>
+      <p className="paragraph">
+        <strong>Community:</strong> We focus on where we can provide value in
+        the community and take action in those areas.
+      </p>
+
+      <h2 className={`title2 ${styles.subtitle}`}>Board of Directors</h2>
+      <p className="paragraph">
+        <strong>Chairman of the Board:</strong> Brett Hurst
+      </p>
+      <p className="paragraph">
+        <strong>Member of the Board:</strong> Nate Spilman
+      </p>
+      <p className="paragraph">
+        <strong>Member of the Board:</strong> Christina Roufosse
+      </p>
+      <p className="paragraph">
+        <strong>Member of the Board:</strong> Lizzy Presland
+      </p>
+      <p className="paragraph">
+        <strong>Member of the Board:</strong> Joseph Burchetta
+      </p>
+
+      <h2 className={`title2 ${styles.subtitle}`}>Executive Team</h2>
+      <p className="paragraph">
+        <strong>President:</strong> Brett Hurst
+      </p>
+      <p className="paragraph">
+        <strong>Vice President:</strong> Nate Spilman
+      </p>
+      <p className="paragraph">
+        <strong>Treasurer:</strong> Nate Spilman
+      </p>
+      <p className="paragraph">
+        <strong>Secretary:</strong> Daniel Kluss
+      </p>
+    </>
   );
-};
-
-export default Organization;
+}

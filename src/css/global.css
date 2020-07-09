@@ -51,6 +51,12 @@ h6 {
   font-family: Ubuntu, Helvetica, sans-serif;
 }
 
+.paragraph {
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  margin: 0 0 var(--space-xs) 0;
+}
+
 .App {
   overflow: hidden;
 }
@@ -86,6 +92,11 @@ h6 {
 .title5 {
   font-size: var(--title-4);
   margin: 0 0 0.75rem 0;
+}
+.title2 {
+  font-size: var(--title-1);
+  margin: 0 0 var(--space-xs) 0;
+  line-height: 1.25;
 }
 .title1 {
   font-size: var(--font-size-lg);
@@ -129,6 +140,9 @@ h6 {
   .title1 {
     font-size: var(--title-1);
     margin: 0 0 var(--space-lg) 0;
+  }
+  .title2 {
+    font-size: var(--title-2);
   }
   .groupTitle {
     font-size: var(--title-2);

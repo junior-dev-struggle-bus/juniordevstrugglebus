@@ -1,0 +1,21 @@
+.pageTitle {
+  margin: var(--space-md) 0 var(--space-md);
+}
+.subtitle {
+  margin: var(--space-lg) 0 var(--space-xs) 0;
+}
+.image {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--space-md);
+}
+@media (min-width: 768px) {
+  .pageTitle {
+    margin: var(--space-md) 0 var(--space-xl);
+  }
+  .image {
+    float: right;
+    width: 60%;
+    margin: 0 0 var(--space-lg) var(--space-lg);
+  }
+}
