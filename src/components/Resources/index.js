@@ -39,7 +39,7 @@ class Resources extends Component {
   };
   componentDidMount() {
     var resourceData = async () => {
-      const resp = await axios.get("https://natespilman.tech/jdsb/resources/");
+      const resp = await axios.get("https://pioneer-django.herokuapp.com/jdsb/resources/");
       const data = await resp.data;
       const headers = await data[0].map(json =>
         json
